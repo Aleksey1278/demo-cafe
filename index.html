@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Demo Café Zürich – Frischer Kaffee & Online-Bestellung</title>
-  <meta name="description" content="Demo Café in Zürich. Frischer Kaffee, hausgemachte Desserts. Online-Bestellung in 2 Klicks.">
+  <meta name="description" content="Demo Café in Zürich. Frischer Kaffee, hausgemachte Desserts. Online-Bestellung in 2 Klicks." />
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="min-h-screen bg-gray-50 text-gray-900">
@@ -12,26 +12,33 @@
   <header class="max-w-5xl mx-auto p-6 text-center">
     <h1 class="text-3xl md:text-4xl font-bold">Demo Café Zürich</h1>
     <p class="mt-2 md:text-lg">Frischer Kaffee. Hausgemachte Desserts. Online-Bestellung in 2 Klicks.</p>
-    <div class="mt-4 flex items-center justify-center gap-3">
-      <!-- CTA: WhatsApp -->
-      <a href="https://wa.me/41783388899?text=Hallo!%20Ich%20m%C3%B6chte%20eine%20Bestellung%20aufgeben."
+    <div class="mt-4 flex flex-wrap items-center justify-center gap-3">
+      <!-- CTA: WhatsApp (demo-only, безопасно) -->
+      <a href="#" onclick="alert('Demo only');return false;"
          class="inline-block px-6 py-3 bg-green-600 text-white rounded-xl shadow hover:opacity-90 transition">
         WhatsApp Bestellung
       </a>
-      <!-- CTA: Anruf -->
-      <a href="tel:+41783388899"
+      <!-- CTA: Anruf (demo-only, безопасно) -->
+      <a href="#" onclick="alert('Demo only');return false;"
          class="inline-block px-6 py-3 bg-black text-white rounded-xl shadow hover:opacity-90 transition">
         Anrufen
+      </a>
+      <!-- CRM Demo (Notion) -->
+      <a href="https://artistic-flavor-b4f.notion.site/685f78d93ada47039baaeb39a8613737?v=024c290623564afb889a0274a5318956"
+         target="_blank" rel="noopener noreferrer"
+         class="inline-block px-6 py-3 bg-blue-600 text-white rounded-xl shadow hover:opacity-90 transition">
+        CRM Demo (Notion)
       </a>
     </div>
   </header>
 
-  <!-- MENU -->
+  <!-- MAIN -->
   <main class="max-w-5xl mx-auto p-6 space-y-12">
+    <!-- MENU -->
     <section aria-labelledby="menu" class="grid md:grid-cols-3 gap-6">
       <div class="p-6 bg-white rounded-2xl shadow">
         <h3 class="font-semibold">Espresso</h3>
-        <p class="text-sm text-gray-600 mt-1">Stark & aromatisch</p>
+        <p class="text-sm text-gray-600 mt-1">Stark &amp; aromatisch</p>
       </div>
       <div class="p-6 bg-white rounded-2xl shadow">
         <h3 class="font-semibold">Cappuccino</h3>
@@ -48,7 +55,7 @@
       <h2 class="text-2xl font-semibold">Online-Bestellung</h2>
       <p class="text-sm text-gray-600 mt-1">Fülle das Formular aus – wir melden uns per WhatsApp oder E-Mail.</p>
 
-      <!-- ВАЖНО: позже вставишь свой Formspree endpoint в action -->
+      <!-- Formspree: endpoint уже вставлен -->
       <form class="mt-4 grid gap-4" action="https://formspree.io/f/xwpnoled" method="POST">
         <input class="p-3 border rounded-xl" name="name" placeholder="Name" required />
         <input class="p-3 border rounded-xl" name="phone" placeholder="Telefon (optional)" />
@@ -90,10 +97,11 @@
     <footer class="text-sm text-gray-500">
       <div class="mt-12 p-6 bg-white rounded-2xl shadow">
         <p>Dies ist eine Demo-Seite für Portfolio-Zwecke. Keine echten Bestellungen.</p>
-        <p class="mt-2">Kontakt: <a class="underline" href="mailto:alikminevic@gmail.com">demo@example.com</a></p>
+        <p class="mt-2">Kontakt: <a class="underline" href="mailto:demo@example.com">demo@example.com</a></p>
         <p class="mt-2">© Demo Café Zürich</p>
       </div>
     </footer>
   </main>
 </body>
 </html>
+
