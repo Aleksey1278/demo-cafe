@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Кофейня Zürich — Демо лендинг</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-gray-50 text-gray-900">
+  <header class="max-w-4xl mx-auto p-6 text-center">
+    <h1 class="text-3xl font-bold">Кофейня Zürich</h1>
+    <p class="mt-2">Свежий кофе. Домашние десерты. Онлайн‑заказ за 2 клика.</p>
+    <a href="#order" class="inline-block mt-4 px-6 py-3 bg-black text-white rounded-xl">Сделать заказ</a>
+  </header>
+  <main class="max-w-4xl mx-auto p-6 space-y-12">
+    <section class="grid md:grid-cols-3 gap-6">
+      <div class="p-6 bg-white rounded-2xl shadow">Эспрессо</div>
+      <div class="p-6 bg-white rounded-2xl shadow">Капучино</div>
+      <div class="p-6 bg-white rounded-2xl shadow">Чизкейк</div>
+    </section>
+    <section id="order" class="p-6 bg-white rounded-2xl shadow">
+      <h2 class="text-2xl font-semibold">Заказ</h2>
+      <form class="mt-4 grid gap-4">
+        <input class="p-3 border rounded-xl" placeholder="Имя" />
+        <input class="p-3 border rounded-xl" placeholder="Телефон" />
+        <textarea class="p-3 border rounded-xl" placeholder="Комментарий"></textarea>
+        <button class="px-6 py-3 bg-black text-white rounded-xl">Отправить</button>
+      </form>
+    </section>
+    <footer class="text-sm text-gray-500">Демо. Сделано для портфолио.</footer>
+  </main>
+</body>
+</html>
