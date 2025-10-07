@@ -6,10 +6,6 @@
   <title>Zürich Local Studio – Premium Demo</title>
   <meta name="description" content="Premium One-Page Demo für kleine Betriebe in Zürich. Leistungen, Preise, Galerie, Bewertungen, FAQ, Anfrage-Formular, Karte." />
   <meta name="robots" content="noindex,nofollow" />
-  <meta property="og:title" content="Zürich Local Studio – Premium Demo" />
-  <meta property="og:description" content="Premium One-Page: Leistungen, Preise, Galerie, Bewertungen, FAQ, Anfrage, Karte." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://aleksey1278.github.io/demo-pro/" />
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     html{scroll-behavior:smooth}
@@ -23,7 +19,7 @@
   <!-- NAVBAR -->
   <div class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b">
     <div class="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
-      <a href="/" class="font-bold tracking-tight text-gray-900">Zürich Local Studio</a>
+      <a href="#" class="font-bold tracking-tight text-gray-900">Zürich Local Studio</a>
 
       <!-- desktop -->
       <nav class="hidden md:flex items-center gap-6 text-sm">
@@ -76,8 +72,10 @@
         <p class="mt-4 text-sm text-gray-500">Einmalig <b>CHF 300</b> · Hosting <b>0 CHF</b> · .ch Domain ~ <b>CHF 15/Jahr</b></p>
       </div>
 
-      <div class="relative rounded-2xl shadow-xl overflow-hidden">
-        <img src="./assets/hero.svg" alt="Hero" class="img-cover" loading="eager">
+      <!-- встроенный SVG hero (не пропадёт) -->
+      <div class="relative rounded-2xl shadow-xl overflow-hidden aspect-video">
+        <img class="img-cover" alt="Hero" loading="eager"
+             src="data:image/svg+xml;utf8,<?xml version='1.0' encoding='UTF-8'?><svg xmlns='http://www.w3.org/2000/svg' width='1600' height='900' viewBox='0 0 1600 900'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%' stop-color='%2360A5FA'/><stop offset='100%' stop-color='%23C084FC'/></linearGradient></defs><rect width='1600' height='900' fill='url(%23g)'/><g fill='%23fff' font-family='Inter,Segoe UI,Arial' text-anchor='middle'><text x='800' y='470' font-size='96' font-weight='700'>Premium Demo – Hero</text></g></svg>">
       </div>
     </section>
   </header>
@@ -160,39 +158,63 @@
       </div>
     </section>
 
-    <!-- Galerie -->
+    <!-- Galerie (inline SVG, не пропадает) -->
     <section id="galerie" class="p-6 rounded-2xl glass border shadow">
       <h2 class="text-2xl font-semibold">Galerie</h2>
       <div class="mt-4 grid grid-cols-2 md:grid-cols-4 gap-3">
-        <img class="rounded-lg shadow w-full h-40 object-cover" src="./assets/g1.svg" alt="Galerie 1" loading="lazy">
-        <img class="rounded-lg shadow w-full h-40 object-cover" src="./assets/g2.svg" alt="Galerie 2" loading="lazy">
-        <img class="rounded-lg shadow w-full h-40 object-cover" src="./assets/g3.svg" alt="Galerie 3" loading="lazy">
-        <img class="rounded-lg shadow w-full h-40 object-cover" src="./assets/g4.svg" alt="Galerie 4" loading="lazy">
+        <!-- карточка 1 -->
+        <div class="rounded-lg shadow overflow-hidden aspect-[4/3]">
+          <img class="img-cover" alt="Galerie 1"
+               src="data:image/svg+xml;utf8,<?xml version='1.0' encoding='UTF-8'?><svg xmlns='http://www.w3.org/2000/svg' width='800' height='600' viewBox='0 0 800 600'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%' stop-color='%2334D399'/><stop offset='100%' stop-color='%2360A5FA'/></linearGradient></defs><rect width='800' height='600' fill='url(%23g)'/><text x='400' y='320' fill='%23fff' font-size='64' font-family='Inter,Segoe UI,Arial' text-anchor='middle' font-weight='700'>Galerie 1</text></svg>">
+        </div>
+        <!-- карточка 2 -->
+        <div class="rounded-lg shadow overflow-hidden aspect-[4/3]">
+          <img class="img-cover" alt="Galerie 2"
+               src="data:image/svg+xml;utf8,<?xml version='1.0' encoding='UTF-8'?><svg xmlns='http://www.w3.org/2000/svg' width='800' height='600' viewBox='0 0 800 600'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%' stop-color='%23F472B6'/><stop offset='100%' stop-color='%2360A5FA'/></linearGradient></defs><rect width='800' height='600' fill='url(%23g)'/><text x='400' y='320' fill='%23fff' font-size='64' font-family='Inter,Segoe UI,Arial' text-anchor='middle' font-weight='700'>Galerie 2</text></svg>">
+        </div>
+        <!-- карточка 3 -->
+        <div class="rounded-lg shadow overflow-hidden aspect-[4/3]">
+          <img class="img-cover" alt="Galerie 3"
+               src="data:image/svg+xml;utf8,<?xml version='1.0' encoding='UTF-8'?><svg xmlns='http://www.w3.org/2000/svg' width='800' height='600' viewBox='0 0 800 600'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%' stop-color='%23F59E0B'/><stop offset='100%' stop-color='%2384CC16'/></linearGradient></defs><rect width='800' height='600' fill='url(%23g)'/><text x='400' y='320' fill='%23fff' font-size='64' font-family='Inter,Segoe UI,Arial' text-anchor='middle' font-weight='700'>Galerie 3</text></svg>">
+        </div>
+        <!-- карточка 4 -->
+        <div class="rounded-lg shadow overflow-hidden aspect-[4/3]">
+          <img class="img-cover" alt="Galerie 4"
+               src="data:image/svg+xml;utf8,<?xml version='1.0' encoding='UTF-8'?><svg xmlns='http://www.w3.org/2000/svg' width='800' height='600' viewBox='0 0 800 600'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%' stop-color='%2322D3EE'/><stop offset='100%' stop-color='%23818CF8'/></linearGradient></defs><rect width='800' height='600' fill='url(%23g)'/><text x='400' y='320' fill='%23fff' font-size='64' font-family='Inter,Segoe UI,Arial' text-anchor='middle' font-weight='700'>Galerie 4</text></svg>">
+        </div>
       </div>
     </section>
 
-    <!-- Bewertungen -->
+    <!-- Bewertungen (inline SVG-аватары) -->
     <section id="bewertungen" class="p-6 rounded-2xl glass border shadow">
       <h2 class="text-2xl font-semibold">Bewertungen</h2>
       <div class="mt-4 grid md:grid-cols-3 gap-4 text-sm">
         <figure class="p-4 bg-white/80 rounded-xl border flex gap-3">
-          <img src="./assets/avatar1.svg" alt="MK" class="w-10 h-10 rounded-full object-cover">
+          <img class="w-10 h-10 rounded-full"
+               alt="MK"
+               src="data:image/svg+xml;utf8,<?xml version='1.0' encoding='UTF-8'?><svg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96'><defs><linearGradient id='ga' x1='0' y1='0' x2='1' y2='1'><stop offset='0%' stop-color='%2360A5FA'/><stop offset='100%' stop-color='%23C084FC'/></linearGradient></defs><rect width='96' height='96' rx='48' fill='url(%23ga)'/><text x='48' y='60' text-anchor='middle' font-size='36' font-family='Inter,Segoe UI,Arial' fill='%23fff' font-weight='700'>MK</text></svg>">
           <div class="nowrap">
             <div class="text-amber-400 text-lg leading-none">★★★★★</div>
             <blockquote class="mt-1 text-gray-700">„Schnell & professionell. Anfragen kommen jetzt automatisch.“</blockquote>
             <figcaption class="mt-1 text-gray-500">— M.K.</figcaption>
           </div>
         </figure>
+
         <figure class="p-4 bg-white/80 rounded-xl border flex gap-3">
-          <img src="./assets/avatar2.svg" alt="MS" class="w-10 h-10 rounded-full object-cover">
+          <img class="w-10 h-10 rounded-full"
+               alt="MS"
+               src="data:image/svg+xml;utf8,<?xml version='1.0' encoding='UTF-8'?><svg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96'><defs><linearGradient id='ga' x1='0' y1='0' x2='1' y2='1'><stop offset='0%' stop-color='%230EA5E9'/><stop offset='100%' stop-color='%236366F1'/></linearGradient></defs><rect width='96' height='96' rx='48' fill='url(%23ga)'/><text x='48' y='60' text-anchor='middle' font-size='36' font-family='Inter,Segoe UI,Arial' fill='%23fff' font-weight='700'>MS</text></svg>">
           <div class="nowrap">
             <div class="text-amber-400 text-lg leading-none">★★★★★</div>
             <blockquote class="mt-1 text-gray-700">„Sieht super am Handy aus. Preis/Leistung top.“</blockquote>
             <figcaption class="mt-1 text-gray-500">— M.S.</figcaption>
           </div>
         </figure>
+
         <figure class="p-4 bg-white/80 rounded-xl border flex gap-3">
-          <img src="./assets/avatar3.svg" alt="MB" class="w-10 h-10 rounded-full object-cover">
+          <img class="w-10 h-10 rounded-full"
+               alt="MB"
+               src="data:image/svg+xml;utf8,<?xml version='1.0' encoding='UTF-8'?><svg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96'><defs><linearGradient id='ga' x1='0' y1='0' x2='1' y2='1'><stop offset='0%' stop-color='%2310B981'/><stop offset='100%' stop-color='%2314B8A6'/></linearGradient></defs><rect width='96' height='96' rx='48' fill='url(%23ga)'/><text x='48' y='60' text-anchor='middle' font-size='36' font-family='Inter,Segoe UI,Arial' fill='%23fff' font-weight='700'>MB</text></svg>">
           <div class="nowrap">
             <div class="text-amber-400 text-lg leading-none">★★★★★</div>
             <blockquote class="mt-1 text-gray-700">„Einfacher Prozess, klare Kommunikation.“</blockquote>
@@ -293,7 +315,6 @@
     </div>
   </div>
 
-  <!-- SCRIPTS -->
   <script>
     // year
     document.getElementById('year').textContent = new Date().getFullYear();
