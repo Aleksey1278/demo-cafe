@@ -72,7 +72,7 @@
         <p class="mt-4 text-sm text-gray-500">Einmalig <b>CHF 300</b> · Hosting <b>0 CHF</b> · .ch Domain ~ <b>CHF 15/Jahr</b></p>
       </div>
 
-      <!-- встроенный SVG hero (не пропадёт) -->
+      <!-- встроенный SVG hero -->
       <div class="relative rounded-2xl shadow-xl overflow-hidden aspect-video">
         <img class="img-cover" alt="Hero" loading="eager"
              src="data:image/svg+xml;utf8,<?xml version='1.0' encoding='UTF-8'?><svg xmlns='http://www.w3.org/2000/svg' width='1600' height='900' viewBox='0 0 1600 900'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%' stop-color='%2360A5FA'/><stop offset='100%' stop-color='%23C084FC'/></linearGradient></defs><rect width='1600' height='900' fill='url(%23g)'/><g fill='%23fff' font-family='Inter,Segoe UI,Arial' text-anchor='middle'><text x='800' y='470' font-size='96' font-weight='700'>Premium Demo – Hero</text></g></svg>">
@@ -125,59 +125,59 @@
       </div>
     </section>
 
-    <!-- Preise -->
-    <section id="preise" class="grid md:grid-cols-2 gap-6">
-      <!-- BASIC -->
-      <div class="relative p-6 sm:p-8 rounded-2xl bg-white/90 border shadow overflow-hidden">
-        <span class="absolute top-3 left-3 px-2 py-0.5 text-xs rounded-full bg-gray-900 text-white">Beliebt</span>
-        <h3 class="font-semibold text-lg">Basic</h3>
-        <p class="text-4xl md:text-5xl font-extrabold mt-1 leading-tight tracking-tight text-gray-900">CHF 300</p>
-        <ul class="mt-4 text-sm text-gray-700 space-y-1 leading-relaxed">
-          <li>✓ One-Page, mobilfreundlich</li>
-          <li>✓ Anfrage-Formular → E-Mail & CRM</li>
-          <li>✓ Karte, WhatsApp/Call, SEO-Basics</li>
-          <li>✓ Domain-Einbindung, Hosting 0 CHF</li>
-        </ul>
-      </div>
-
-      <!-- PRO -->
-      <div class="relative p-6 sm:p-8 rounded-2xl overflow-hidden shadow-lg ring-1 ring-black/5">
-        <div class="absolute inset-0 bg-gradient-to-br from-indigo-600 via-blue-600 to-fuchsia-600"></div>
-        <div class="absolute inset-0 bg-black/15"></div>
-        <div class="relative text-white">
-          <span class="absolute top-3 left-3 px-2 py-0.5 text-xs rounded-full bg-white/20 border border-white/20">Pro</span>
-          <h3 class="font-semibold text-lg">Pro</h3>
-          <p class="text-4xl md:text-5xl font-extrabold mt-1 leading-tight tracking-tight drop-shadow">ab CHF 450</p>
-          <ul class="mt-4 text-sm space-y-1 leading-relaxed">
-            <li>+ Online-Buchung (Fresha/Acuity)</li>
-            <li>+ Galerie, Testimonials, DE/EN</li>
-            <li>+ Öffnungszeiten „Jetzt geöffnet“</li>
-            <li>+ Schema.org & erweiterte SEO</li>
+    <!-- PREISE (симметрично) -->
+    <section id="preise" class="py-4">
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- BASIC -->
+        <div class="relative p-6 sm:p-8 rounded-2xl overflow-hidden shadow-lg ring-1 ring-black/5 bg-white">
+          <span class="absolute top-3 left-3 px-2 py-0.5 text-xs rounded-full bg-gray-100 border border-gray-300 text-gray-700">Basic</span>
+          <h3 class="font-semibold text-lg mt-6">Basic</h3>
+          <p class="text-4xl md:text-5xl font-extrabold mt-2 leading-tight tracking-tight text-gray-900">CHF 300</p>
+          <ul class="mt-4 text-sm space-y-1 leading-relaxed text-gray-700">
+            <li>✔ Onepager (Landing Page)</li>
+            <li>✔ Kontaktformular → E-Mail & CRM</li>
+            <li>✔ WhatsApp / Anruf Buttons</li>
+            <li>✔ Google Map integriert</li>
+            <li>✔ SEO-Basis</li>
           </ul>
+        </div>
+
+        <!-- PRO -->
+        <div class="relative p-6 sm:p-8 rounded-2xl overflow-hidden shadow-lg ring-1 ring-black/5">
+          <div class="absolute inset-0 bg-gradient-to-br from-indigo-600 via-blue-600 to-fuchsia-600"></div>
+          <div class="absolute inset-0 bg-black/15"></div>
+          <div class="relative text-white">
+            <span class="absolute top-3 left-3 px-2 py-0.5 text-xs rounded-full bg-white/20 border border-white/20">Pro</span>
+            <h3 class="font-semibold text-lg mt-6">Pro</h3>
+            <p class="text-4xl md:text-5xl font-extrabold mt-2 leading-tight tracking-tight drop-shadow">ab CHF 450</p>
+            <ul class="mt-4 text-sm space-y-1 leading-relaxed">
+              <li>✔ Alles aus Basic</li>
+              <li>✔ Online-Buchung (Fresha/Acuity)</li>
+              <li>✔ Galerie, Testimonials, DE/EN</li>
+              <li>✔ Öffnungszeiten „Jetzt geöffnet“</li>
+              <li>✔ Schema.org & erweiterte SEO</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Galerie (inline SVG, не пропадает) -->
+    <!-- Galerie (inline SVG) -->
     <section id="galerie" class="p-6 rounded-2xl glass border shadow">
       <h2 class="text-2xl font-semibold">Galerie</h2>
       <div class="mt-4 grid grid-cols-2 md:grid-cols-4 gap-3">
-        <!-- карточка 1 -->
         <div class="rounded-lg shadow overflow-hidden aspect-[4/3]">
           <img class="img-cover" alt="Galerie 1"
                src="data:image/svg+xml;utf8,<?xml version='1.0' encoding='UTF-8'?><svg xmlns='http://www.w3.org/2000/svg' width='800' height='600' viewBox='0 0 800 600'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%' stop-color='%2334D399'/><stop offset='100%' stop-color='%2360A5FA'/></linearGradient></defs><rect width='800' height='600' fill='url(%23g)'/><text x='400' y='320' fill='%23fff' font-size='64' font-family='Inter,Segoe UI,Arial' text-anchor='middle' font-weight='700'>Galerie 1</text></svg>">
         </div>
-        <!-- карточка 2 -->
         <div class="rounded-lg shadow overflow-hidden aspect-[4/3]">
           <img class="img-cover" alt="Galerie 2"
                src="data:image/svg+xml;utf8,<?xml version='1.0' encoding='UTF-8'?><svg xmlns='http://www.w3.org/2000/svg' width='800' height='600' viewBox='0 0 800 600'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%' stop-color='%23F472B6'/><stop offset='100%' stop-color='%2360A5FA'/></linearGradient></defs><rect width='800' height='600' fill='url(%23g)'/><text x='400' y='320' fill='%23fff' font-size='64' font-family='Inter,Segoe UI,Arial' text-anchor='middle' font-weight='700'>Galerie 2</text></svg>">
         </div>
-        <!-- карточка 3 -->
         <div class="rounded-lg shadow overflow-hidden aspect-[4/3]">
           <img class="img-cover" alt="Galerie 3"
                src="data:image/svg+xml;utf8,<?xml version='1.0' encoding='UTF-8'?><svg xmlns='http://www.w3.org/2000/svg' width='800' height='600' viewBox='0 0 800 600'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%' stop-color='%23F59E0B'/><stop offset='100%' stop-color='%2384CC16'/></linearGradient></defs><rect width='800' height='600' fill='url(%23g)'/><text x='400' y='320' fill='%23fff' font-size='64' font-family='Inter,Segoe UI,Arial' text-anchor='middle' font-weight='700'>Galerie 3</text></svg>">
         </div>
-        <!-- карточка 4 -->
         <div class="rounded-lg shadow overflow-hidden aspect-[4/3]">
           <img class="img-cover" alt="Galerie 4"
                src="data:image/svg+xml;utf8,<?xml version='1.0' encoding='UTF-8'?><svg xmlns='http://www.w3.org/2000/svg' width='800' height='600' viewBox='0 0 800 600'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%' stop-color='%2322D3EE'/><stop offset='100%' stop-color='%23818CF8'/></linearGradient></defs><rect width='800' height='600' fill='url(%23g)'/><text x='400' y='320' fill='%23fff' font-size='64' font-family='Inter,Segoe UI,Arial' text-anchor='middle' font-weight='700'>Galerie 4</text></svg>">
