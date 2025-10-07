@@ -4,35 +4,28 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Zürich Local Studio – Premium Demo</title>
-  <meta name="description" content="Premium One-Page Demo für kleine Betriebe in Zürich. Leistungen, Preise, Galerie, Bewertungen, FAQ, Anfrage-Formular, Karte.">
+  <meta name="description" content="Premium One-Page Demo für kleine Betriebe in Zürich. Leistungen, Preise, Galerie, Bewertungen, FAQ, Anfrage-Formular, Karte." />
   <meta name="robots" content="noindex,nofollow" />
-  <meta property="og:title" content="Zürich Local Studio – Premium Demo">
-  <meta property="og:description" content="Premium One-Page: Leistungen, Preise, Galerie, Bewertungen, FAQ, Anfrage, Karte.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://aleksey1278.github.io/demo-pro/">
+  <meta property="og:title" content="Zürich Local Studio – Premium Demo" />
+  <meta property="og:description" content="Premium One-Page: Leistungen, Preise, Galerie, Bewertungen, FAQ, Anfrage, Karte." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://aleksey1278.github.io/demo-pro/" />
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     html{scroll-behavior:smooth}
-    .glass{background:rgba(255,255,255,.75);backdrop-filter:blur(8px)}
-    .shine{position:relative;overflow:hidden}
-    .shine:before{content:"";position:absolute;inset:-200%;background:conic-gradient(from 0deg,#ffffff40 0deg,#ffffff00 120deg,#ffffff40 240deg,#ffffff00 360deg);animation:spin 14s linear infinite}
-    @keyframes spin{to{transform:rotate(1turn)}}
+    .glass{background:rgba(255,255,255,.8);backdrop-filter:blur(10px)}
+    .nowrap{overflow-wrap:anywhere;word-break:break-word;hyphens:auto}
+    .img-cover{object-fit:cover;width:100%;height:100%}
   </style>
-
-  <!-- Schema.org (LocalBusiness) -->
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"LocalBusiness","name":"Zürich Local Studio",
-   "address":{"@type":"PostalAddress","streetAddress":"Musterstrasse 1","addressLocality":"Zürich","postalCode":"8000","addressCountry":"CH"},
-   "telephone":"+41 79 000 00 00",
-   "openingHours":["Mo-Fr 09:00-18:00","Sa 09:00-14:00"]}
-  </script>
 </head>
 <body class="bg-gradient-to-br from-blue-50 via-indigo-50 to-fuchsia-50 text-gray-900">
 
-  <!-- Sticky top nav -->
-  <div class="sticky top-0 z-40 glass border-b">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="#" class="font-bold tracking-tight">Zürich Local Studio</a>
+  <!-- NAVBAR -->
+  <div class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b">
+    <div class="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
+      <a href="/" class="font-bold tracking-tight text-gray-900">Zürich Local Studio</a>
+
+      <!-- desktop -->
       <nav class="hidden md:flex items-center gap-6 text-sm">
         <a href="#leistungen" class="hover:opacity-80">Leistungen</a>
         <a href="#preise" class="hover:opacity-80">Preise</a>
@@ -40,21 +33,40 @@
         <a href="#bewertungen" class="hover:opacity-80">Bewertungen</a>
         <a href="#anfrage" class="px-3 py-1.5 rounded-lg bg-blue-600 text-white hover:opacity-90">Anfrage</a>
       </nav>
+
+      <!-- burger -->
+      <button id="burger" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border bg-white/70">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- mobile menu -->
+    <div id="mobileMenu" class="md:hidden hidden border-t bg-white/90">
+      <div class="max-w-6xl mx-auto px-4 py-3 grid gap-2 text-sm">
+        <a href="#leistungen" class="py-1">Leistungen</a>
+        <a href="#preise" class="py-1">Preise</a>
+        <a href="#galerie" class="py-1">Galerie</a>
+        <a href="#bewertungen" class="py-1">Bewertungen</a>
+        <a href="#anfrage" class="py-2 text-center rounded-lg bg-blue-600 text-white">Anfrage</a>
+      </div>
     </div>
   </div>
 
   <!-- HERO -->
   <header class="max-w-6xl mx-auto px-4 pt-10 pb-6">
     <section class="grid md:grid-cols-2 gap-8 items-center">
-      <div>
+      <div class="break-words">
         <p class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-blue-700">
           <span class="w-1.5 h-1.5 rounded-full bg-blue-700"></span> Premium Demo
         </p>
         <h1 class="text-4xl md:text-6xl font-extrabold leading-[1.1] mt-2">
-          Moderne Website, <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-fuchsia-600">die verkauft</span>
+          Moderne Website,
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-fuchsia-600">die verkauft</span>
         </h1>
         <p class="mt-4 text-gray-700 text-lg">
-          Mobilfreundlich, schnell, mit Anfrage-Formular, Öffnungszeiten, Bewertungen und Karte. Genau то, что нужно kleinen Betrieben.
+          Mobilfreundlich, schnell, mit Anfrage-Formular, Öffnungszeiten, Bewertungen und Karte.
         </p>
         <div class="mt-6 flex flex-wrap gap-3">
           <a href="#anfrage" class="px-5 py-3 rounded-xl bg-blue-600 text-white shadow hover:opacity-90">Kostenloses Demo anfragen</a>
@@ -63,10 +75,9 @@
         </div>
         <p class="mt-4 text-sm text-gray-500">Einmalig <b>CHF 300</b> · Hosting <b>0 CHF</b> · .ch Domain ~ <b>CHF 15/Jahr</b></p>
       </div>
-      <div class="relative rounded-2xl shadow-xl shine">
-        <img class="w-full h-full object-cover"
-             src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1600&auto=format&fit=crop"
-             alt="Hero" loading="lazy">
+
+      <div class="relative rounded-2xl shadow-xl overflow-hidden">
+        <img src="./assets/hero.svg" alt="Hero" class="img-cover" loading="eager">
       </div>
     </section>
   </header>
@@ -101,15 +112,15 @@
     <section id="leistungen" class="p-6 rounded-2xl glass border shadow">
       <h2 class="text-2xl font-semibold">Leistungen</h2>
       <div class="mt-4 grid md:grid-cols-3 gap-6">
-        <div class="p-4 bg-white/70 rounded-xl border">
+        <div class="p-4 bg-white/80 rounded-xl border">
           <div class="font-medium">One-Page Website</div>
           <p class="text-sm text-gray-600 mt-1">Klar strukturiert, schnell, sauber.</p>
         </div>
-        <div class="p-4 bg-white/70 rounded-xl border">
+        <div class="p-4 bg-white/80 rounded-xl border">
           <div class="font-medium">Online-Anfrage</div>
           <p class="text-sm text-gray-600 mt-1">Formular → E-Mail + CRM.</p>
         </div>
-        <div class="p-4 bg-white/70 rounded-xl border">
+        <div class="p-4 bg-white/80 rounded-xl border">
           <div class="font-medium">Online-Buchung (optional)</div>
           <p class="text-sm text-gray-600 mt-1">Fresha (gratis) oder Acuity.</p>
         </div>
@@ -118,27 +129,34 @@
 
     <!-- Preise -->
     <section id="preise" class="grid md:grid-cols-2 gap-6">
-      <div class="relative p-6 rounded-2xl glass border shadow">
-        <span class="absolute -top-3 left-6 px-2 py-0.5 text-xs rounded-full bg-gray-900 text-white">Beliebt</span>
+      <!-- BASIC -->
+      <div class="relative p-6 sm:p-8 rounded-2xl bg-white/90 border shadow overflow-hidden">
+        <span class="absolute top-3 left-3 px-2 py-0.5 text-xs rounded-full bg-gray-900 text-white">Beliebt</span>
         <h3 class="font-semibold text-lg">Basic</h3>
-        <p class="text-4xl font-extrabold mt-1">CHF 300</p>
-        <ul class="mt-4 text-sm text-gray-700 space-y-1">
+        <p class="text-4xl md:text-5xl font-extrabold mt-1 leading-tight tracking-tight text-gray-900">CHF 300</p>
+        <ul class="mt-4 text-sm text-gray-700 space-y-1 leading-relaxed">
           <li>✓ One-Page, mobilfreundlich</li>
           <li>✓ Anfrage-Formular → E-Mail & CRM</li>
           <li>✓ Karte, WhatsApp/Call, SEO-Basics</li>
           <li>✓ Domain-Einbindung, Hosting 0 CHF</li>
         </ul>
       </div>
-      <div class="relative p-6 rounded-2xl bg-gradient-to-br from-blue-600 to-fuchsia-600 text-white shadow">
-        <span class="absolute -top-3 left-6 px-2 py-0.5 text-xs rounded-full bg-white/20">Profi</span>
-        <h3 class="font-semibold text-lg">Pro</h3>
-        <p class="text-4xl font-extrabold mt-1">ab CHF 450</p>
-        <ul class="mt-4 text-sm space-y-1">
-          <li>+ Online-Buchung (Fresha/Acuity)</li>
-          <li>+ Galerie, Testimonials, DE/EN</li>
-          <li>+ Öffnungszeiten „Jetzt geöffnet“</li>
-          <li>+ Schema.org & erweiterte SEO</li>
-        </ul>
+
+      <!-- PRO -->
+      <div class="relative p-6 sm:p-8 rounded-2xl overflow-hidden shadow-lg ring-1 ring-black/5">
+        <div class="absolute inset-0 bg-gradient-to-br from-indigo-600 via-blue-600 to-fuchsia-600"></div>
+        <div class="absolute inset-0 bg-black/15"></div>
+        <div class="relative text-white">
+          <span class="absolute top-3 left-3 px-2 py-0.5 text-xs rounded-full bg-white/20 border border-white/20">Pro</span>
+          <h3 class="font-semibold text-lg">Pro</h3>
+          <p class="text-4xl md:text-5xl font-extrabold mt-1 leading-tight tracking-tight drop-shadow">ab CHF 450</p>
+          <ul class="mt-4 text-sm space-y-1 leading-relaxed">
+            <li>+ Online-Buchung (Fresha/Acuity)</li>
+            <li>+ Galerie, Testimonials, DE/EN</li>
+            <li>+ Öffnungszeiten „Jetzt geöffnet“</li>
+            <li>+ Schema.org & erweiterte SEO</li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -146,10 +164,10 @@
     <section id="galerie" class="p-6 rounded-2xl glass border shadow">
       <h2 class="text-2xl font-semibold">Galerie</h2>
       <div class="mt-4 grid grid-cols-2 md:grid-cols-4 gap-3">
-        <img class="rounded-lg shadow" src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=800&auto=format&fit=crop" alt="" loading="lazy">
-        <img class="rounded-lg shadow" src="https://images.unsplash.com/photo-1559339352-0d8a2b3b7f5e?q=80&w=800&auto=format&fit=crop" alt="" loading="lazy">
-        <img class="rounded-lg shadow" src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=800&auto=format&fit=crop" alt="" loading="lazy">
-        <img class="rounded-lg shadow" src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=800&auto=format&fit=crop" alt="" loading="lazy">
+        <img class="rounded-lg shadow w-full h-40 object-cover" src="./assets/g1.svg" alt="Galerie 1" loading="lazy">
+        <img class="rounded-lg shadow w-full h-40 object-cover" src="./assets/g2.svg" alt="Galerie 2" loading="lazy">
+        <img class="rounded-lg shadow w-full h-40 object-cover" src="./assets/g3.svg" alt="Galerie 3" loading="lazy">
+        <img class="rounded-lg shadow w-full h-40 object-cover" src="./assets/g4.svg" alt="Galerie 4" loading="lazy">
       </div>
     </section>
 
@@ -157,29 +175,38 @@
     <section id="bewertungen" class="p-6 rounded-2xl glass border shadow">
       <h2 class="text-2xl font-semibold">Bewertungen</h2>
       <div class="mt-4 grid md:grid-cols-3 gap-4 text-sm">
-        <figure class="p-4 bg-white/70 rounded-xl border">
-          <div class="text-amber-400 text-lg">★★★★★</div>
-          <blockquote class="mt-1 text-gray-700">„Schnell & professionell. Anfragen kommen jetzt automatisch.“</blockquote>
-          <figcaption class="mt-2 text-gray-500">— M.K.</figcaption>
+        <figure class="p-4 bg-white/80 rounded-xl border flex gap-3">
+          <img src="./assets/avatar1.svg" alt="MK" class="w-10 h-10 rounded-full object-cover">
+          <div class="nowrap">
+            <div class="text-amber-400 text-lg leading-none">★★★★★</div>
+            <blockquote class="mt-1 text-gray-700">„Schnell & professionell. Anfragen kommen jetzt automatisch.“</blockquote>
+            <figcaption class="mt-1 text-gray-500">— M.K.</figcaption>
+          </div>
         </figure>
-        <figure class="p-4 bg-white/70 rounded-xl border">
-          <div class="text-amber-400 text-lg">★★★★★</div>
-          <blockquote class="mt-1 text-gray-700">„Sieht super am Handy aus. Preis/Leistung top.“</blockquote>
-          <figcaption class="mt-2 text-gray-500">— M.S.</figcaption>
+        <figure class="p-4 bg-white/80 rounded-xl border flex gap-3">
+          <img src="./assets/avatar2.svg" alt="MS" class="w-10 h-10 rounded-full object-cover">
+          <div class="nowrap">
+            <div class="text-amber-400 text-lg leading-none">★★★★★</div>
+            <blockquote class="mt-1 text-gray-700">„Sieht super am Handy aus. Preis/Leistung top.“</blockquote>
+            <figcaption class="mt-1 text-gray-500">— M.S.</figcaption>
+          </div>
         </figure>
-        <figure class="p-4 bg-white/70 rounded-xl border">
-          <div class="text-amber-400 text-lg">★★★★★</div>
-          <blockquote class="mt-1 text-gray-700">„Einfacher Prozess, klare Kommunikation.“</blockquote>
-          <figcaption class="mt-2 text-gray-500">— M.B.</figcaption>
+        <figure class="p-4 bg-white/80 rounded-xl border flex gap-3">
+          <img src="./assets/avatar3.svg" alt="MB" class="w-10 h-10 rounded-full object-cover">
+          <div class="nowrap">
+            <div class="text-amber-400 text-lg leading-none">★★★★★</div>
+            <blockquote class="mt-1 text-gray-700">„Einfacher Prozess, klare Kommunikation.“</blockquote>
+            <figcaption class="mt-1 text-gray-500">— M.B.</figcaption>
+          </div>
         </figure>
       </div>
     </section>
 
-    <!-- Öffnungszeiten mit Status -->
+    <!-- Öffnungszeiten -->
     <section class="p-6 rounded-2xl glass border shadow">
       <div class="flex items-center justify-between gap-4">
         <h2 class="text-2xl font-semibold">Öffnungszeiten</h2>
-        <p id="openStatus" class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-medium bg-white/70 border">
+        <p id="openStatus" class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-medium bg-white/80 border">
           <span class="inline-block w-2.5 h-2.5 rounded-full bg-gray-400"></span>
           <span>Wird geladen…</span>
         </p>
@@ -196,15 +223,15 @@
     <section class="p-6 rounded-2xl glass border shadow">
       <h2 class="text-2xl font-semibold">FAQ</h2>
       <div class="mt-4 space-y-2">
-        <details class="p-4 bg-white/70 rounded-xl border">
+        <details class="p-4 bg-white/80 rounded-xl border">
           <summary class="font-medium cursor-pointer">Wie schnell ist die Umsetzung?</summary>
           <p class="mt-2 text-sm text-gray-700">Basic in 2–3 Tagen nach Freigabe.</p>
         </details>
-        <details class="p-4 bg-white/70 rounded-xl border">
+        <details class="p-4 bg-white/80 rounded-xl border">
           <summary class="font-medium cursor-pointer">Was sind laufende Kosten?</summary>
           <p class="mt-2 text-sm text-gray-700">Nur Domain (~15 CHF/Jahr). Hosting 0 CHF.</p>
         </details>
-        <details class="p-4 bg-white/70 rounded-xl border">
+        <details class="p-4 bg-white/80 rounded-xl border">
           <summary class="font-medium cursor-pointer">Wie kommen Anfragen in die CRM?</summary>
           <p class="mt-2 text-sm text-gray-700">Formular sendet E-Mails und kann in eine Kanban-CRM integriert werden.</p>
         </details>
@@ -235,7 +262,7 @@
     <section id="kontakt" class="p-6 rounded-2xl glass border shadow">
       <h2 class="text-2xl font-semibold">Kontakt & Standort</h2>
       <div class="mt-4 grid md:grid-cols-2 gap-6">
-        <div class="text-sm text-gray-700">
+        <div class="text-sm text-gray-700 nowrap">
           <p><b>Adresse:</b> Musterstrasse 1, 8000 Zürich</p>
           <p class="mt-1"><b>E-Mail:</b> <a class="underline" href="mailto:demo@example.com">demo@example.com</a></p>
           <p class="mt-1"><b>Telefon:</b> (Demo) 079 000 00 00</p>
@@ -243,7 +270,7 @@
         <div class="aspect-video rounded-2xl overflow-hidden border">
           <iframe class="w-full h-full" loading="lazy" allowfullscreen
             referrerpolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps?q=Z%C3%BCrich%208000&output=embed"></iframe>
+            src="https://www.google.com/maps?q=Z%C3%BCrich%208000&output=embed" title="Karte – Zürich Local Studio"></iframe>
         </div>
       </div>
     </section>
@@ -258,7 +285,7 @@
   </main>
 
   <!-- Mobile sticky CTA -->
-  <div class="md:hidden fixed bottom-0 left-0 right-0 p-3 glass border-t shadow">
+  <div class="md:hidden fixed bottom-0 left-0 right-0 p-3 bg-white/90 backdrop-blur border-t shadow">
     <div class="grid grid-cols-3 gap-2">
       <a href="#" onclick="alert('Demo only');return false;" class="px-3 py-2 rounded-lg bg-green-600 text-white text-center">WhatsApp</a>
       <a href="#" onclick="alert('Demo only');return false;" class="px-3 py-2 rounded-lg bg-black text-white text-center">Anrufen</a>
@@ -266,9 +293,15 @@
     </div>
   </div>
 
+  <!-- SCRIPTS -->
   <script>
-    // Jahr im Footer
+    // year
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // burger
+    const burger = document.getElementById('burger');
+    const menu = document.getElementById('mobileMenu');
+    burger?.addEventListener('click', () => menu.classList.toggle('hidden'));
 
     // Öffnungsstatus (Europe/Zurich)
     (function(){
