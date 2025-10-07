@@ -3,102 +3,113 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Zürich Local Studio – Moderne Website für KMU</title>
-  <meta name="description" content="Professionelle One-Page Website für kleine Betriebe in Zürich: Leistungen, Preise, Online-Anfrage, Öffnungszeiten, Bewertungen und Karte.">
-  <!-- Не индексируем демо -->
+  <title>Zürich Local Studio – Premium Demo</title>
+  <meta name="description" content="Premium One-Page Demo für kleine Betriebe in Zürich. Leistungen, Preise, Galerie, Bewertungen, FAQ, Anfrage-Formular, Karte.">
   <meta name="robots" content="noindex,nofollow" />
-  <!-- Open Graph -->
-  <meta property="og:title" content="Zürich Local Studio – Moderne Website für KMU">
-  <meta property="og:description" content="Moderne One-Page Website: Leistungen, Preise, Anfrage, Öffnungszeiten, Bewertungen, Karte.">
+  <meta property="og:title" content="Zürich Local Studio – Premium Demo">
+  <meta property="og:description" content="Premium One-Page: Leistungen, Preise, Galerie, Bewertungen, FAQ, Anfrage, Karte.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://aleksey1278.github.io/demo-pro/">
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>html{scroll-behavior:smooth}</style>
+  <style>
+    html{scroll-behavior:smooth}
+    .glass{background:rgba(255,255,255,.75);backdrop-filter:blur(8px)}
+    .shine{position:relative;overflow:hidden}
+    .shine:before{content:"";position:absolute;inset:-200%;background:conic-gradient(from 0deg,#ffffff40 0deg,#ffffff00 120deg,#ffffff40 240deg,#ffffff00 360deg);animation:spin 14s linear infinite}
+    @keyframes spin{to{transform:rotate(1turn)}}
+  </style>
 
   <!-- Schema.org (LocalBusiness) -->
   <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"LocalBusiness",
-    "name":"Zürich Local Studio",
-    "address":{"@type":"PostalAddress","streetAddress":"Musterstrasse 1","addressLocality":"Zürich","postalCode":"8000","addressCountry":"CH"},
-    "telephone":"+41 79 000 00 00",
-    "openingHours":["Mo-Fr 09:00-18:00","Sa 09:00-14:00"]
-  }
+  {"@context":"https://schema.org","@type":"LocalBusiness","name":"Zürich Local Studio",
+   "address":{"@type":"PostalAddress","streetAddress":"Musterstrasse 1","addressLocality":"Zürich","postalCode":"8000","addressCountry":"CH"},
+   "telephone":"+41 79 000 00 00",
+   "openingHours":["Mo-Fr 09:00-18:00","Sa 09:00-14:00"]}
   </script>
 </head>
-<body class="bg-gray-50 text-gray-900">
-  <!-- Top bar -->
-  <div class="bg-black text-white text-sm">
-    <div class="max-w-6xl mx-auto px-4 py-2 flex items-center justify-between">
-      <span>Zürich Local Studio</span>
-      <nav class="hidden md:flex gap-6">
+<body class="bg-gradient-to-br from-blue-50 via-indigo-50 to-fuchsia-50 text-gray-900">
+
+  <!-- Sticky top nav -->
+  <div class="sticky top-0 z-40 glass border-b">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#" class="font-bold tracking-tight">Zürich Local Studio</a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
         <a href="#leistungen" class="hover:opacity-80">Leistungen</a>
         <a href="#preise" class="hover:opacity-80">Preise</a>
-        <a href="#anfrage" class="hover:opacity-80">Anfrage</a>
-        <a href="#kontakt" class="hover:opacity-80">Kontakt</a>
+        <a href="#galerie" class="hover:opacity-80">Galerie</a>
+        <a href="#bewertungen" class="hover:opacity-80">Bewertungen</a>
+        <a href="#anfrage" class="px-3 py-1.5 rounded-lg bg-blue-600 text-white hover:opacity-90">Anfrage</a>
       </nav>
     </div>
   </div>
 
   <!-- HERO -->
-  <header class="max-w-6xl mx-auto px-4 pt-10">
+  <header class="max-w-6xl mx-auto px-4 pt-10 pb-6">
     <section class="grid md:grid-cols-2 gap-8 items-center">
       <div>
-        <h1 class="text-3xl md:text-5xl font-bold leading-tight">Moderne Website für KMU in Zürich</h1>
-        <p class="mt-3 text-gray-700 text-lg">Mobilfreundlich, schnell und klar. Mit Anfrage-Formular, Öffnungszeiten, Bewertungen und Karte.</p>
+        <p class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-blue-700">
+          <span class="w-1.5 h-1.5 rounded-full bg-blue-700"></span> Premium Demo
+        </p>
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-[1.1] mt-2">
+          Moderne Website, <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-fuchsia-600">die verkauft</span>
+        </h1>
+        <p class="mt-4 text-gray-700 text-lg">
+          Mobilfreundlich, schnell, mit Anfrage-Formular, Öffnungszeiten, Bewertungen und Karte. Genau то, что нужно kleinen Betrieben.
+        </p>
         <div class="mt-6 flex flex-wrap gap-3">
-          <a href="#anfrage" class="px-5 py-3 rounded-xl bg-blue-600 text-white shadow hover:opacity-90">Termin anfragen</a>
+          <a href="#anfrage" class="px-5 py-3 rounded-xl bg-blue-600 text-white shadow hover:opacity-90">Kostenloses Demo anfragen</a>
           <a href="#" onclick="alert('Demo only');return false;" class="px-5 py-3 rounded-xl bg-black text-white shadow hover:opacity-90">Anrufen</a>
           <a href="#" onclick="alert('Demo only');return false;" class="px-5 py-3 rounded-xl bg-green-600 text-white shadow hover:opacity-90">WhatsApp</a>
         </div>
         <p class="mt-4 text-sm text-gray-500">Einmalig <b>CHF 300</b> · Hosting <b>0 CHF</b> · .ch Domain ~ <b>CHF 15/Jahr</b></p>
       </div>
-      <div class="relative overflow-hidden rounded-2xl shadow">
-        <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1600&auto=format&fit=crop" alt="Hero" class="w-full h-full object-cover" loading="lazy">
+      <div class="relative rounded-2xl shadow-xl shine">
+        <img class="w-full h-full object-cover"
+             src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1600&auto=format&fit=crop"
+             alt="Hero" loading="lazy">
       </div>
     </section>
   </header>
 
-  <main class="max-w-6xl mx-auto px-4 py-12 space-y-12">
+  <main class="max-w-6xl mx-auto px-4 py-10 space-y-12">
 
     <!-- Vorteile -->
     <section class="grid md:grid-cols-4 gap-4">
-      <div class="p-5 bg-white rounded-2xl shadow">
+      <div class="p-5 rounded-2xl glass border shadow">
         <div class="text-2xl">📱</div>
         <h3 class="font-semibold mt-2">Mobilfreundlich</h3>
-        <p class="text-sm text-gray-600 mt-1">Sieht perfekt auf dem Handy aus.</p>
+        <p class="text-sm text-gray-600 mt-1">Sieht perfekt am Handy aus.</p>
       </div>
-      <div class="p-5 bg-white rounded-2xl shadow">
+      <div class="p-5 rounded-2xl glass border shadow">
+        <div class="text-2xl">⚡</div>
+        <h3 class="font-semibold mt-2">Schnell & SEO-ready</h3>
+        <p class="text-sm text-gray-600 mt-1">Saubere Struktur, Meta, Schema.</p>
+      </div>
+      <div class="p-5 rounded-2xl glass border shadow">
         <div class="text-2xl">✅</div>
         <h3 class="font-semibold mt-2">Anfragen automatisch</h3>
         <p class="text-sm text-gray-600 mt-1">Formular → E-Mail & kleine CRM (Kanban).</p>
       </div>
-      <div class="p-5 bg-white rounded-2xl shadow">
-        <div class="text-2xl">⭐</div>
-        <h3 class="font-semibold mt-2">Bewertungen</h3>
-        <p class="text-sm text-gray-600 mt-1">Zeigen Sie Google-Reviews auf der Seite.</p>
-      </div>
-      <div class="p-5 bg-white rounded-2xl shadow">
+      <div class="p-5 rounded-2xl glass border shadow">
         <div class="text-2xl">🗺️</div>
         <h3 class="font-semibold mt-2">Karte & Kontakt</h3>
-        <p class="text-sm text-gray-600 mt-1">WhatsApp/Anruf + Google Map.</p>
+        <p class="text-sm text-gray-600 mt-1">WhatsApp, Anruf, Google Map.</p>
       </div>
     </section>
 
     <!-- Leistungen -->
-    <section id="leistungen" class="p-6 bg-white rounded-2xl shadow">
+    <section id="leistungen" class="p-6 rounded-2xl glass border shadow">
       <h2 class="text-2xl font-semibold">Leistungen</h2>
       <div class="mt-4 grid md:grid-cols-3 gap-6">
-        <div class="p-4 bg-gray-50 rounded-xl">
+        <div class="p-4 bg-white/70 rounded-xl border">
           <div class="font-medium">One-Page Website</div>
-          <p class="text-sm text-gray-600 mt-1">Schnell & klar strukturiert.</p>
+          <p class="text-sm text-gray-600 mt-1">Klar strukturiert, schnell, sauber.</p>
         </div>
-        <div class="p-4 bg-gray-50 rounded-xl">
+        <div class="p-4 bg-white/70 rounded-xl border">
           <div class="font-medium">Online-Anfrage</div>
           <p class="text-sm text-gray-600 mt-1">Formular → E-Mail + CRM.</p>
         </div>
-        <div class="p-4 bg-gray-50 rounded-xl">
+        <div class="p-4 bg-white/70 rounded-xl border">
           <div class="font-medium">Online-Buchung (optional)</div>
           <p class="text-sm text-gray-600 mt-1">Fresha (gratis) oder Acuity.</p>
         </div>
@@ -106,59 +117,69 @@
     </section>
 
     <!-- Preise -->
-    <section id="preise" class="p-6 bg-white rounded-2xl shadow">
-      <h2 class="text-2xl font-semibold">Preise</h2>
-      <div class="mt-4 grid md:grid-cols-2 gap-6">
-        <div class="p-6 rounded-2xl border">
-          <h3 class="font-semibold text-lg">Basic</h3>
-          <p class="text-3xl font-bold mt-1">CHF 300</p>
-          <ul class="mt-3 text-sm text-gray-700 space-y-1">
-            <li>✓ One-Page, mobilfreundlich</li>
-            <li>✓ Anfrage-Formular → E-Mail & CRM</li>
-            <li>✓ Karte, WhatsApp/Call, SEO-Basics</li>
-            <li>✓ Domain-Einbindung, Hosting 0 CHF</li>
-          </ul>
-        </div>
-        <div class="p-6 rounded-2xl border">
-          <h3 class="font-semibold text-lg">Pro</h3>
-          <p class="text-3xl font-bold mt-1">ab CHF 450</p>
-          <ul class="mt-3 text-sm text-gray-700 space-y-1">
-            <li>+ Online-Buchung (Fresha/Acuity)</li>
-            <li>+ Galerie, Testimonials, DE/EN</li>
-            <li>+ Öffnungszeiten «Jetzt geöffnet»</li>
-            <li>+ Schema.org & erweiterte SEO</li>
-          </ul>
-        </div>
+    <section id="preise" class="grid md:grid-cols-2 gap-6">
+      <div class="relative p-6 rounded-2xl glass border shadow">
+        <span class="absolute -top-3 left-6 px-2 py-0.5 text-xs rounded-full bg-gray-900 text-white">Beliebt</span>
+        <h3 class="font-semibold text-lg">Basic</h3>
+        <p class="text-4xl font-extrabold mt-1">CHF 300</p>
+        <ul class="mt-4 text-sm text-gray-700 space-y-1">
+          <li>✓ One-Page, mobilfreundlich</li>
+          <li>✓ Anfrage-Formular → E-Mail & CRM</li>
+          <li>✓ Karte, WhatsApp/Call, SEO-Basics</li>
+          <li>✓ Domain-Einbindung, Hosting 0 CHF</li>
+        </ul>
       </div>
-      <p class="text-sm text-gray-500 mt-3">Externe Kosten: .ch Domain ca. 15 CHF/Jahr, Hosting 0 CHF (GitHub Pages).</p>
+      <div class="relative p-6 rounded-2xl bg-gradient-to-br from-blue-600 to-fuchsia-600 text-white shadow">
+        <span class="absolute -top-3 left-6 px-2 py-0.5 text-xs rounded-full bg-white/20">Profi</span>
+        <h3 class="font-semibold text-lg">Pro</h3>
+        <p class="text-4xl font-extrabold mt-1">ab CHF 450</p>
+        <ul class="mt-4 text-sm space-y-1">
+          <li>+ Online-Buchung (Fresha/Acuity)</li>
+          <li>+ Galerie, Testimonials, DE/EN</li>
+          <li>+ Öffnungszeiten „Jetzt geöffnet“</li>
+          <li>+ Schema.org & erweiterte SEO</li>
+        </ul>
+      </div>
     </section>
 
     <!-- Galerie -->
-    <section class="p-6 bg-white rounded-2xl shadow">
+    <section id="galerie" class="p-6 rounded-2xl glass border shadow">
       <h2 class="text-2xl font-semibold">Galerie</h2>
       <div class="mt-4 grid grid-cols-2 md:grid-cols-4 gap-3">
-        <img class="rounded-lg" src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=800&auto=format&fit=crop" alt="" loading="lazy">
-        <img class="rounded-lg" src="https://images.unsplash.com/photo-1559339352-0d8a2b3b7f5e?q=80&w=800&auto=format&fit=crop" alt="" loading="lazy">
-        <img class="rounded-lg" src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=800&auto=format&fit=crop" alt="" loading="lazy">
-        <img class="rounded-lg" src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=800&auto=format&fit=crop" alt="" loading="lazy">
+        <img class="rounded-lg shadow" src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=800&auto=format&fit=crop" alt="" loading="lazy">
+        <img class="rounded-lg shadow" src="https://images.unsplash.com/photo-1559339352-0d8a2b3b7f5e?q=80&w=800&auto=format&fit=crop" alt="" loading="lazy">
+        <img class="rounded-lg shadow" src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=800&auto=format&fit=crop" alt="" loading="lazy">
+        <img class="rounded-lg shadow" src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=800&auto=format&fit=crop" alt="" loading="lazy">
       </div>
     </section>
 
     <!-- Bewertungen -->
-    <section class="p-6 bg-white rounded-2xl shadow">
+    <section id="bewertungen" class="p-6 rounded-2xl glass border shadow">
       <h2 class="text-2xl font-semibold">Bewertungen</h2>
       <div class="mt-4 grid md:grid-cols-3 gap-4 text-sm">
-        <blockquote class="p-4 bg-gray-50 rounded-xl">„Schnell & professionell. Unsere Anfragen kommen jetzt automatisch.“ – M.K.</blockquote>
-        <blockquote class="p-4 bg-gray-50 rounded-xl">„Website sieht super am Handy aus. Preis/Leistung top.“ – M.S.</blockquote>
-        <blockquote class="p-4 bg-gray-50 rounded-xl">„Einfacher Prozess, klare Kommunikation.“ – M.B.</blockquote>
+        <figure class="p-4 bg-white/70 rounded-xl border">
+          <div class="text-amber-400 text-lg">★★★★★</div>
+          <blockquote class="mt-1 text-gray-700">„Schnell & professionell. Anfragen kommen jetzt automatisch.“</blockquote>
+          <figcaption class="mt-2 text-gray-500">— M.K.</figcaption>
+        </figure>
+        <figure class="p-4 bg-white/70 rounded-xl border">
+          <div class="text-amber-400 text-lg">★★★★★</div>
+          <blockquote class="mt-1 text-gray-700">„Sieht super am Handy aus. Preis/Leistung top.“</blockquote>
+          <figcaption class="mt-2 text-gray-500">— M.S.</figcaption>
+        </figure>
+        <figure class="p-4 bg-white/70 rounded-xl border">
+          <div class="text-amber-400 text-lg">★★★★★</div>
+          <blockquote class="mt-1 text-gray-700">„Einfacher Prozess, klare Kommunikation.“</blockquote>
+          <figcaption class="mt-2 text-gray-500">— M.B.</figcaption>
+        </figure>
       </div>
     </section>
 
     <!-- Öffnungszeiten mit Status -->
-    <section class="p-6 bg-white rounded-2xl shadow">
+    <section class="p-6 rounded-2xl glass border shadow">
       <div class="flex items-center justify-between gap-4">
         <h2 class="text-2xl font-semibold">Öffnungszeiten</h2>
-        <p id="openStatus" class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-medium bg-gray-100">
+        <p id="openStatus" class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-medium bg-white/70 border">
           <span class="inline-block w-2.5 h-2.5 rounded-full bg-gray-400"></span>
           <span>Wird geladen…</span>
         </p>
@@ -172,26 +193,26 @@
     </section>
 
     <!-- FAQ -->
-    <section class="p-6 bg-white rounded-2xl shadow">
+    <section class="p-6 rounded-2xl glass border shadow">
       <h2 class="text-2xl font-semibold">FAQ</h2>
       <div class="mt-4 space-y-2">
-        <details class="p-4 bg-gray-50 rounded-xl">
+        <details class="p-4 bg-white/70 rounded-xl border">
           <summary class="font-medium cursor-pointer">Wie schnell ist die Umsetzung?</summary>
-          <p class="mt-2 text-sm text-gray-700">Basic Version in 2–3 Tagen nach Freigabe.</p>
+          <p class="mt-2 text-sm text-gray-700">Basic in 2–3 Tagen nach Freigabe.</p>
         </details>
-        <details class="p-4 bg-gray-50 rounded-xl">
+        <details class="p-4 bg-white/70 rounded-xl border">
           <summary class="font-medium cursor-pointer">Was sind laufende Kosten?</summary>
           <p class="mt-2 text-sm text-gray-700">Nur Domain (~15 CHF/Jahr). Hosting 0 CHF.</p>
         </details>
-        <details class="p-4 bg-gray-50 rounded-xl">
+        <details class="p-4 bg-white/70 rounded-xl border">
           <summary class="font-medium cursor-pointer">Wie kommen Anfragen in die CRM?</summary>
-          <p class="mt-2 text-sm text-gray-700">Formular sendet E-Mails und kann in eine einfache Kanban-CRM integriert werden.</p>
+          <p class="mt-2 text-sm text-gray-700">Formular sendet E-Mails und kann in eine Kanban-CRM integriert werden.</p>
         </details>
       </div>
     </section>
 
     <!-- Anfrage-Formular -->
-    <section id="anfrage" class="p-6 bg-white rounded-2xl shadow">
+    <section id="anfrage" class="p-6 rounded-2xl glass border shadow">
       <h2 class="text-2xl font-semibold">Online-Anfrage</h2>
       <p class="text-sm text-gray-600 mt-1">Füllen Sie das Formular aus – wir melden uns zurück.</p>
       <form class="mt-4 grid gap-4" action="https://formspree.io/f/xwpnoled" method="POST">
@@ -199,9 +220,7 @@
         <input class="p-3 border rounded-xl" name="phone" placeholder="Telefon (optional)" />
         <input class="p-3 border rounded-xl" type="email" name="email" placeholder="E-Mail" required />
         <textarea class="p-3 border rounded-xl" name="message" placeholder="Wunschtermin / Nachricht" required></textarea>
-        <!-- Anti-spam -->
         <input type="text" name="_gotcha" style="display:none" />
-        <!-- Redirect (обнови, если repo называется иначе) -->
         <input type="hidden" name="_next" value="https://aleksey1278.github.io/demo-pro/?success=1" />
         <button class="px-6 py-3 bg-black text-white rounded-xl">Senden</button>
       </form>
@@ -213,7 +232,7 @@
     </section>
 
     <!-- Kontakt & Karte -->
-    <section id="kontakt" class="p-6 bg-white rounded-2xl shadow">
+    <section id="kontakt" class="p-6 rounded-2xl glass border shadow">
       <h2 class="text-2xl font-semibold">Kontakt & Standort</h2>
       <div class="mt-4 grid md:grid-cols-2 gap-6">
         <div class="text-sm text-gray-700">
@@ -221,7 +240,7 @@
           <p class="mt-1"><b>E-Mail:</b> <a class="underline" href="mailto:demo@example.com">demo@example.com</a></p>
           <p class="mt-1"><b>Telefon:</b> (Demo) 079 000 00 00</p>
         </div>
-        <div class="aspect-video rounded-2xl overflow-hidden">
+        <div class="aspect-video rounded-2xl overflow-hidden border">
           <iframe class="w-full h-full" loading="lazy" allowfullscreen
             referrerpolicy="no-referrer-when-downgrade"
             src="https://www.google.com/maps?q=Z%C3%BCrich%208000&output=embed"></iframe>
@@ -229,17 +248,17 @@
       </div>
     </section>
 
-    <!-- Hinweis -->
+    <!-- Footer -->
     <footer class="text-sm text-gray-500">
-      <div class="mt-12 p-6 bg-white rounded-2xl shadow">
-        <p>Dies ist eine Demo-Seite für Präsentationszwecke. Keine echten Bestellungen.</p>
+      <div class="mt-12 p-6 rounded-2xl glass border shadow">
+        <p>Dies ist eine Demo-Seite. Keine echten Bestellungen.</p>
         <p class="mt-2">© <span id="year"></span> Zürich Local Studio</p>
       </div>
     </footer>
   </main>
 
   <!-- Mobile sticky CTA -->
-  <div class="md:hidden fixed bottom-0 left-0 right-0 p-3 bg-white/90 backdrop-blur border-t shadow">
+  <div class="md:hidden fixed bottom-0 left-0 right-0 p-3 glass border-t shadow">
     <div class="grid grid-cols-3 gap-2">
       <a href="#" onclick="alert('Demo only');return false;" class="px-3 py-2 rounded-lg bg-green-600 text-white text-center">WhatsApp</a>
       <a href="#" onclick="alert('Demo only');return false;" class="px-3 py-2 rounded-lg bg-black text-white text-center">Anrufen</a>
@@ -248,7 +267,7 @@
   </div>
 
   <script>
-    // Jahr
+    // Jahr im Footer
     document.getElementById('year').textContent = new Date().getFullYear();
 
     // Öffnungsstatus (Europe/Zurich)
@@ -264,7 +283,7 @@
       const hours=schedule[day];
       if(!hours){dot.classList.replace('bg-gray-400','bg-red-600'); label.textContent='Heute geschlossen'; return;}
       const [f,t]=hours, fm=+f.split(':')[0]*60+ +f.split(':')[1], tm=+t.split(':')[0]*60+ +t.split(':')[1];
-      const open = now>=fm && now<tm;
+      const open=now>=fm&&now<tm;
       dot.classList.replace('bg-gray-400', open?'bg-green-600':'bg-red-600');
       label.textContent = (open?`Jetzt geöffnet · heute ${f}–${t}`:`Jetzt geschlossen · heute ${f}–${t}`);
     })();
