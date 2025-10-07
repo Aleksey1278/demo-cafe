@@ -1,1 +1,1 @@
-# demo-cafe
+# demo-site
