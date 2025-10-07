@@ -12,40 +12,81 @@
     .glass{background:rgba(255,255,255,.8);backdrop-filter:blur(10px)}
     .nowrap{overflow-wrap:anywhere;word-break:break-word;hyphens:auto}
     .img-cover{object-fit:cover;width:100%;height:100%}
+    /* desktop nav underline + active state */
+    .navlink{
+      position:relative; padding:0 .75rem; height:2.5rem; display:flex; align-items:center;
+      color:#111827; font-weight:500; border-radius:.75rem;
+    }
+    .navlink:hover{ background:rgba(0,0,0,.03) }
+    .nav-underline{
+      position:absolute; left:12px; right:12px; bottom:6px; height:2px; border-radius:2px;
+      background:linear-gradient(90deg,#2563eb,#d946ef);
+      transform:scaleX(0); transform-origin:left; transition:transform .25s ease;
+    }
+    .navlink:hover .nav-underline{ transform:scaleX(1) }
+    .navlink.active{ color:#1d4ed8 }
+    .navlink.active .nav-underline{ transform:scaleX(1) }
+    .mnav{
+      padding:.9rem 1rem; border-radius:.9rem; border:1px solid rgba(0,0,0,.06);
+      background:#fff; font-weight:500;
+    }
+    .mnav:active{ transform:scale(.99) }
+    .mnav-cta{
+      padding:1rem 1.1rem; border-radius:1rem; color:#fff; text-align:center; font-weight:600;
+      background:linear-gradient(90deg,#2563eb,#d946ef); box-shadow:0 6px 16px rgba(37,99,235,.25);
+    }
   </style>
 </head>
 <body class="bg-gradient-to-br from-blue-50 via-indigo-50 to-fuchsia-50 text-gray-900">
 
-  <!-- NAVBAR -->
-  <div class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b">
-    <div class="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
-      <a href="#" class="font-bold tracking-tight text-gray-900">Zürich Local Studio</a>
+  <!-- NAVBAR — glass, underline-hover, glow-CTA -->
+  <div class="sticky top-0 z-50 border-b backdrop-blur bg-white/70">
+    <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+      <!-- logo -->
+      <a href="#" class="text-lg font-extrabold tracking-tight text-gray-900">
+        Zürich <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-fuchsia-600">Local Studio</span>
+      </a>
 
-      <!-- desktop -->
-      <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a href="#leistungen" class="hover:opacity-80">Leistungen</a>
-        <a href="#preise" class="hover:opacity-80">Preise</a>
-        <a href="#galerie" class="hover:opacity-80">Galerie</a>
-        <a href="#bewertungen" class="hover:opacity-80">Bewertungen</a>
-        <a href="#anfrage" class="px-3 py-1.5 rounded-lg bg-blue-600 text-white hover:opacity-90">Anfrage</a>
+      <!-- desktop nav -->
+      <nav class="hidden md:flex items-center gap-1">
+        <a href="#leistungen" class="navlink group">Leistungen<span class="nav-underline"></span></a>
+        <a href="#preise" class="navlink group">Preise<span class="nav-underline"></span></a>
+        <a href="#galerie" class="navlink group">Galerie<span class="nav-underline"></span></a>
+        <a href="#bewertungen" class="navlink group">Bewertungen<span class="nav-underline"></span></a>
+
+        <!-- CTA -->
+        <a href="#anfrage"
+           class="ml-3 inline-flex items-center gap-2 px-4 h-10 rounded-full text-white font-medium
+                  bg-gradient-to-r from-blue-600 to-fuchsia-600 shadow
+                  hover:shadow-lg hover:scale-[1.02] active:scale-[0.99]
+                  transition-all duration-200 ring-1 ring-white/20">
+          Anfrage
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 opacity-90" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
       </nav>
 
       <!-- burger -->
-      <button id="burger" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border bg-white/70">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/>
+      <button id="burger"
+              class="md:hidden inline-flex items-center justify-center w-11 h-11 rounded-xl border
+                     bg-white/80 shadow-sm active:scale-95 transition">
+        <svg id="burgerIcon" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path id="bar1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7h16"/>
+          <path id="bar2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16"/>
+          <path id="bar3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 17h16"/>
         </svg>
       </button>
     </div>
 
     <!-- mobile menu -->
-    <div id="mobileMenu" class="md:hidden hidden border-t bg-white/90">
-      <div class="max-w-6xl mx-auto px-4 py-3 grid gap-2 text-sm">
-        <a href="#leistungen" class="py-1">Leistungen</a>
-        <a href="#preise" class="py-1">Preise</a>
-        <a href="#galerie" class="py-1">Galerie</a>
-        <a href="#bewertungen" class="py-1">Bewertungen</a>
-        <a href="#anfrage" class="py-2 text-center rounded-lg bg-blue-600 text-white">Anfrage</a>
+    <div id="mobileMenu" class="md:hidden hidden border-t bg-white/95">
+      <div class="max-w-6xl mx-auto px-4 py-4 grid gap-2">
+        <a href="#leistungen" class="mnav">Leistungen</a>
+        <a href="#preise" class="mnav">Preise</a>
+        <a href="#galerie" class="mnav">Galerie</a>
+        <a href="#bewertungen" class="mnav">Bewertungen</a>
+        <a href="#anfrage" class="mnav-cta">Anfrage senden</a>
       </div>
     </div>
   </div>
@@ -130,6 +171,8 @@
       <div class="grid md:grid-cols-2 gap-6">
         <!-- BASIC -->
         <div class="relative p-6 sm:p-8 rounded-2xl overflow-hidden shadow-lg ring-1 ring-black/5 bg-white">
+          <span class="absolute top-3 left-3 px-2 py-0.5 text-xs rounded-full bg-gray-100 border border-gray-300 text-gray-700">Basic</span>
+          <h3 class="font-semibold text-lg mt-6">Basic</h3>
           <p class="text-4xl md:text-5xl font-extrabold mt-2 leading-tight tracking-tight text-gray-900">CHF 300</p>
           <ul class="mt-4 text-sm space-y-1 leading-relaxed text-gray-700">
             <li>✔ Onepager (Landing Page)</li>
@@ -145,7 +188,9 @@
           <div class="absolute inset-0 bg-gradient-to-br from-indigo-600 via-blue-600 to-fuchsia-600"></div>
           <div class="absolute inset-0 bg-black/15"></div>
           <div class="relative text-white">
-            <p class="text-4xl md:text-5xl font-extrabold mt-2 leading-tight tracking-tight drop-shadow">ab CHF 500</p>
+            <span class="absolute top-3 left-3 px-2 py-0.5 text-xs rounded-full bg-white/20 border border-white/20">Pro</span>
+            <h3 class="font-semibold text-lg mt-6">Pro</h3>
+            <p class="text-4xl md:text-5xl font-extrabold mt-2 leading-tight tracking-tight drop-shadow">ab CHF 450</p>
             <ul class="mt-4 text-sm space-y-1 leading-relaxed">
               <li>✔ Alles aus Basic</li>
               <li>✔ Online-Buchung (Fresha/Acuity)</li>
@@ -311,14 +356,55 @@
     </div>
   </div>
 
+  <!-- SCRIPTS -->
   <script>
-    // year
+    // год в футере
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // burger
+    // burger toggle + анимация иконки
     const burger = document.getElementById('burger');
     const menu = document.getElementById('mobileMenu');
-    burger?.addEventListener('click', () => menu.classList.toggle('hidden'));
+    const bar1 = document.getElementById('bar1');
+    const bar2 = document.getElementById('bar2');
+    const bar3 = document.getElementById('bar3');
+
+    burger?.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+      if(menu.classList.contains('hidden')){
+        bar1.setAttribute('d','M4 7h16');
+        bar2.setAttribute('d','M4 12h16');
+        bar3.setAttribute('d','M4 17h16');
+      } else {
+        bar1.setAttribute('d','M5 5l14 14');
+        bar2.setAttribute('d','M12 12h0');
+        bar3.setAttribute('d','M19 5L5 19');
+      }
+    });
+
+    // подсветка активного пункта по скроллу
+    const sections = ['leistungen','preise','galerie','bewertungen','anfrage'];
+    const links = Array.from(document.querySelectorAll('.navlink'));
+    const idToLink = Object.fromEntries(links.map(a => [a.getAttribute('href')?.replace('#',''), a]));
+
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if(e.isIntersecting){
+          const id = e.target.id;
+          links.forEach(l => l.classList.remove('active'));
+          idToLink[id]?.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+
+    sections.forEach(id => {
+      const el = document.getElementById(id);
+      if(el) obs.observe(el);
+    });
+
+    // закрытие мобильного меню по клику на пункт
+    document.querySelectorAll('#mobileMenu a').forEach(a=>{
+      a.addEventListener('click', ()=> menu.classList.add('hidden'));
+    });
 
     // Öffnungsstatus (Europe/Zurich)
     (function(){
