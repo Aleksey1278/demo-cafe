@@ -3,50 +3,41 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Zürich Local Studio – Moderne Website für lokale Betriebe</title>
-
-  <!-- SEO / OG (в продакшене ОБНОВИТЬ домен/пути) -->
-  <link rel="canonical" href="https://DEIN-DOMAIN-NAME.ch/">
-  <meta name="description" content="Schnelle, mobilfreundliche One-Page-Websites für kleine Betriebe in Zürich. Anfrage-Formular, Öffnungszeiten, Bewertungen, Karte, Buchung." />
-  <meta property="og:title" content="Moderne Website für kleine Betriebe in Zürich" />
-  <meta property="og:description" content="Mobilfreundlich, schnell, Anfrage-Formular, Öffnungszeiten, Bewertungen, Karte." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://DEIN-DOMAIN-NAME.ch/" />
-  <meta property="og:image" content="https://DEIN-DOMAIN-NAME.ch/img/og-cover.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <!-- ДЛЯ ДЕМО можно оставить, для продакшена УДАЛИТЬ -->
+  <title>Zürich Local Studio – Premium Demo</title>
+  <meta name="description" content="Premium One-Page Demo für kleine Betriebe in Zürich. Leistungen, Preise, Galerie, Bewertungen, FAQ, Anfrage-Formular, Karte." />
   <meta name="robots" content="noindex,nofollow" />
-
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     html{scroll-behavior:smooth}
     .glass{background:rgba(255,255,255,.8);backdrop-filter:blur(10px)}
     .nowrap{overflow-wrap:anywhere;word-break:break-word;hyphens:auto}
     .img-cover{object-fit:cover;width:100%;height:100%}
-    .navlink{position:relative;padding:0 .75rem;height:2.5rem;display:flex;align-items:center;color:#111827;font-weight:500;border-radius:.75rem}
-    .navlink:hover{background:rgba(0,0,0,.03)}
-    .nav-underline{position:absolute;left:12px;right:12px;bottom:6px;height:2px;border-radius:2px;background:linear-gradient(90deg,#2563eb,#d946ef);transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
-    .navlink:hover .nav-underline{transform:scaleX(1)}
-    .navlink.active{color:#1d4ed8}
-    .navlink.active .nav-underline{transform:scaleX(1)}
-    .mnav{padding:.9rem 1rem;border-radius:.9rem;border:1px solid rgba(0,0,0,.06);background:#fff;font-weight:500}
-    .mnav:active{transform:scale(.99)}
-    .mnav-cta{padding:1rem 1.1rem;border-radius:1rem;color:#fff;text-align:center;font-weight:600;background:linear-gradient(90deg,#2563eb,#d946ef);box-shadow:0 6px 16px rgba(37,99,235,.25)}
-    :focus-visible{outline:3px solid #2563eb;outline-offset:2px}
-    @media (prefers-reduced-motion: reduce){
-      *{animation-duration:0.001ms!important;animation-iteration-count:1!important;transition-duration:0.001ms!important;scroll-behavior:auto!important}
+    /* desktop nav underline + active state */
+    .navlink{
+      position:relative; padding:0 .75rem; height:2.5rem; display:flex; align-items:center;
+      color:#111827; font-weight:500; border-radius:.75rem;
+    }
+    .navlink:hover{ background:rgba(0,0,0,.03) }
+    .nav-underline{
+      position:absolute; left:12px; right:12px; bottom:6px; height:2px; border-radius:2px;
+      background:linear-gradient(90deg,#2563eb,#d946ef);
+      transform:scaleX(0); transform-origin:left; transition:transform .25s ease;
+    }
+    .navlink:hover .nav-underline{ transform:scaleX(1) }
+    .navlink.active{ color:#1d4ed8 }
+    .navlink.active .nav-underline{ transform:scaleX(1) }
+    .mnav{
+      padding:.9rem 1rem; border-radius:.9rem; border:1px solid rgba(0,0,0,.06);
+      background:#fff; font-weight:500;
+    }
+    .mnav:active{ transform:scale(.99) }
+    .mnav-cta{
+      padding:1rem 1.1rem; border-radius:1rem; color:#fff; text-align:center; font-weight:600;
+      background:linear-gradient(90deg,#2563eb,#d946ef); box-shadow:0 6px 16px rgba(37,99,235,.25);
     }
   </style>
 </head>
 <body class="bg-gradient-to-br from-blue-50 via-indigo-50 to-fuchsia-50 text-gray-900">
-
-  <!-- Skip link -->
-  <a href="#leistungen"
-     class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2
-            focus:bg-white focus:text-blue-700 focus:px-3 focus:py-2 focus:rounded-lg">
-    Zum Inhalt springen
-  </a>
 
   <!-- NAVBAR — glass, underline-hover, glow-CTA -->
   <div class="sticky top-0 z-50 border-b backdrop-blur bg-white/70">
@@ -63,6 +54,7 @@
         <a href="#galerie" class="navlink group">Galerie<span class="nav-underline"></span></a>
         <a href="#bewertungen" class="navlink group">Bewertungen<span class="nav-underline"></span></a>
 
+        <!-- CTA -->
         <a href="#anfrage"
            class="ml-3 inline-flex items-center gap-2 px-4 h-10 rounded-full text-white font-medium
                   bg-gradient-to-r from-blue-600 to-fuchsia-600 shadow
@@ -78,9 +70,8 @@
       <!-- burger -->
       <button id="burger"
               class="md:hidden inline-flex items-center justify-center w-11 h-11 rounded-xl border
-                     bg-white/80 shadow-sm active:scale-95 transition"
-              aria-controls="mobileMenu" aria-expanded="false" aria-label="Menü umschalten">
-        <svg id="burgerIcon" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                     bg-white/80 shadow-sm active:scale-95 transition">
+        <svg id="burgerIcon" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path id="bar1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7h16"/>
           <path id="bar2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16"/>
           <path id="bar3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 17h16"/>
@@ -116,17 +107,17 @@
         </p>
         <div class="mt-6 flex flex-wrap gap-3">
           <a href="#anfrage" class="px-5 py-3 rounded-xl bg-blue-600 text-white shadow hover:opacity-90">Kostenloses Demo anfragen</a>
-          <a href="#" class="px-5 py-3 rounded-xl bg-black text-white shadow hover:opacity-90" data-call>Anrufen</a>
-          <a href="#" class="px-5 py-3 rounded-xl bg-green-600 text-white shadow hover:opacity-90" data-wa>WhatsApp</a>
+          <a href="#" onclick="alert('Demo only');return false;" class="px-5 py-3 rounded-xl bg-black text-white shadow hover:opacity-90">Anrufen</a>
+          <a href="#" onclick="alert('Demo only');return false;" class="px-5 py-3 rounded-xl bg-green-600 text-white shadow hover:opacity-90">WhatsApp</a>
         </div>
         <p class="mt-4 text-sm text-gray-500">Einmalig <b>CHF 300</b> · Hosting <b>0 CHF</b> · .ch Domain ~ <b>CHF 15/Jahr</b></p>
       </div>
 
-      <!-- HERO image -->
-      <picture class="relative rounded-2xl shadow-xl overflow-hidden aspect-video block">
-        <source type="image/webp" srcset="/img/hero-1280.webp 1280w, /img/hero-1600.webp 1600w" sizes="(min-width:1024px) 50vw, 100vw">
-        <img class="w-full h-full object-cover" src="/img/hero-blur.jpg" data-src="/img/hero-1600.jpg" alt="Hero – modernes lokales Studio in Zürich" loading="eager" decoding="async">
-      </picture>
+      <!-- встроенный SVG hero -->
+      <div class="relative rounded-2xl shadow-xl overflow-hidden aspect-video">
+        <img class="img-cover" alt="Hero" loading="eager"
+             src="data:image/svg+xml;utf8,<?xml version='1.0' encoding='UTF-8'?><svg xmlns='http://www.w3.org/2000/svg' width='1600' height='900' viewBox='0 0 1600 900'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%' stop-color='%2360A5FA'/><stop offset='100%' stop-color='%23C084FC'/></linearGradient></defs><rect width='1600' height='900' fill='url(%23g)'/><g fill='%23fff' font-family='Inter,Segoe UI,Arial' text-anchor='middle'><text x='800' y='470' font-size='96' font-weight='700'>Premium Demo – Hero</text></g></svg>">
+      </div>
     </section>
   </header>
 
@@ -156,16 +147,6 @@
       </div>
     </section>
 
-    <!-- Warum wir -->
-    <section class="p-6 rounded-2xl glass border shadow">
-      <h2 class="text-2xl font-semibold">Warum wir?</h2>
-      <ul class="mt-3 grid md:grid-cols-3 gap-4 text-sm text-gray-700">
-        <li class="p-4 bg-white/80 rounded-xl border">🎯 <b>Klarer Fokus:</b> lokale Betriebe im Kanton Zürich.</li>
-        <li class="p-4 bg-white/80 rounded-xl border">🛠️ <b>Schnelle Umsetzung:</b> Basic in 2–3 Tagen nach Freigabe.</li>
-        <li class="p-4 bg-white/80 rounded-xl border">📈 <b>Ergebnis-orientiert:</b> Anfragen gehen automatisch ein.</li>
-      </ul>
-    </section>
-
     <!-- Leistungen -->
     <section id="leistungen" class="p-6 rounded-2xl glass border shadow">
       <h2 class="text-2xl font-semibold">Leistungen</h2>
@@ -185,38 +166,28 @@
       </div>
     </section>
 
-    <!-- PREISE -->
+    <!-- PREISE (симметрично) -->
     <section id="preise" class="py-4">
       <div class="grid md:grid-cols-2 gap-6">
-
         <!-- BASIC -->
-        <div class="relative p-6 sm:p-8 rounded-2xl overflow-hidden shadow-lg ring-1 ring-black/5 bg-white flex flex-col">
-          <div>
-            <h3 class="font-semibold text-lg">Basic</h3>
-            <p class="text-4xl md:text-5xl font-extrabold mt-2 tracking-tight text-gray-900">CHF 300</p>
-            <ul class="mt-4 text-sm leading-relaxed text-gray-700 space-y-2">
-              <li>✔ Onepager (Landing Page)</li>
-              <li>✔ Kontaktformular → E-Mail & CRM</li>
-              <li>✔ WhatsApp / Anruf Buttons</li>
-              <li>✔ Google Map integriert</li>
-              <li>✔ SEO-Basis</li>
-            </ul>
-          </div>
-          <a href="#anfrage"
-             class="mt-6 inline-flex items-center justify-center h-11 rounded-xl bg-gray-900 text-white
-                    hover:bg-gray-800 transition shadow">Jetzt anfragen</a>
+        <div class="relative p-6 sm:p-8 rounded-2xl overflow-hidden shadow-lg ring-1 ring-black/5 bg-white">
+          <p class="text-4xl md:text-5xl font-extrabold mt-2 leading-tight tracking-tight text-gray-900">CHF 300</p>
+          <ul class="mt-4 text-sm space-y-1 leading-relaxed text-gray-700">
+            <li>✔ Onepager (Landing Page)</li>
+            <li>✔ Kontaktformular → E-Mail & CRM</li>
+            <li>✔ WhatsApp / Anruf Buttons</li>
+            <li>✔ Google Map integriert</li>
+            <li>✔ SEO-Basis</li>
+          </ul>
         </div>
 
         <!-- PRO -->
-        <div class="relative p-6 sm:p-8 rounded-2xl overflow-hidden shadow-lg ring-1 ring-black/5 flex flex-col">
+        <div class="relative p-6 sm:p-8 rounded-2xl overflow-hidden shadow-lg ring-1 ring-black/5">
           <div class="absolute inset-0 bg-gradient-to-br from-indigo-600 via-blue-600 to-fuchsia-600"></div>
           <div class="absolute inset-0 bg-black/15"></div>
-
-          <div class="relative text-white grow">
-            <span class="inline-block px-2 py-0.5 text-xs rounded-full bg-white/20 border border-white/20">Beliebt</span>
-            <h3 class="font-semibold text-lg mt-2">Pro</h3>
-            <p class="text-4xl md:text-5xl font-extrabold mt-2 tracking-tight drop-shadow">ab CHF 450</p>
-            <ul class="mt-4 text-sm leading-relaxed space-y-2">
+          <div class="relative text-white">
+            <p class="text-4xl md:text-5xl font-extrabold mt-2 leading-tight tracking-tight drop-shadow">ab CHF 500</p>
+            <ul class="mt-4 text-sm space-y-1 leading-relaxed">
               <li>✔ Alles aus Basic</li>
               <li>✔ Online-Buchung (Fresha/Acuity)</li>
               <li>✔ Galerie, Testimonials, DE/EN</li>
@@ -224,67 +195,65 @@
               <li>✔ Schema.org & erweiterte SEO</li>
             </ul>
           </div>
-          <a href="#anfrage"
-             class="relative mt-6 inline-flex items-center justify-center h-11 rounded-xl bg-white text-gray-900 hover:bg-white/90 transition shadow">
-            Jetzt anfragen
-          </a>
         </div>
       </div>
     </section>
 
-    <!-- Galerie -->
+    <!-- Galerie (inline SVG) -->
     <section id="galerie" class="p-6 rounded-2xl glass border shadow">
       <h2 class="text-2xl font-semibold">Galerie</h2>
       <div class="mt-4 grid grid-cols-2 md:grid-cols-4 gap-3">
-        <!-- 1 -->
-        <picture class="rounded-lg overflow-hidden shadow aspect-[4/3] block">
-          <source type="image/webp" srcset="/img/galerie1-800.webp 800w, /img/galerie1-1200.webp 1200w" sizes="(min-width:1024px) 25vw, 50vw">
-          <img class="w-full h-full object-cover" src="/img/galerie1-blur.jpg" data-src="/img/galerie1-1200.jpg" alt="Galerie – Bild 1" loading="lazy" decoding="async">
-        </picture>
-        <!-- 2 -->
-        <picture class="rounded-lg overflow-hidden shadow aspect-[4/3] block">
-          <source type="image/webp" srcset="/img/galerie2-800.webp 800w, /img/galerie2-1200.webp 1200w" sizes="(min-width:1024px) 25vw, 50vw">
-          <img class="w-full h-full object-cover" src="/img/galerie2-blur.jpg" data-src="/img/galerie2-1200.jpg" alt="Galerie – Bild 2" loading="lazy" decoding="async">
-        </picture>
-        <!-- 3 -->
-        <picture class="rounded-lg overflow-hidden shadow aspect-[4/3] block">
-          <source type="image/webp" srcset="/img/galerie3-800.webp 800w, /img/galerie3-1200.webp 1200w" sizes="(min-width:1024px) 25vw, 50vw">
-          <img class="w-full h-full object-cover" src="/img/galerie3-blur.jpg" data-src="/img/galerie3-1200.jpg" alt="Galerie – Bild 3" loading="lazy" decoding="async">
-        </picture>
-        <!-- 4 -->
-        <picture class="rounded-lg overflow-hidden shadow aspect-[4/3] block">
-          <source type="image/webp" srcset="/img/galerie4-800.webp 800w, /img/galerie4-1200.webp 1200w" sizes="(min-width:1024px) 25vw, 50vw">
-          <img class="w-full h-full object-cover" src="/img/galerie4-blur.jpg" data-src="/img/galerie4-1200.jpg" alt="Galerie – Bild 4" loading="lazy" decoding="async">
-        </picture>
+        <div class="rounded-lg shadow overflow-hidden aspect-[4/3]">
+          <img class="img-cover" alt="Galerie 1"
+               src="data:image/svg+xml;utf8,<?xml version='1.0' encoding='UTF-8'?><svg xmlns='http://www.w3.org/2000/svg' width='800' height='600' viewBox='0 0 800 600'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%' stop-color='%2334D399'/><stop offset='100%' stop-color='%2360A5FA'/></linearGradient></defs><rect width='800' height='600' fill='url(%23g)'/><text x='400' y='320' fill='%23fff' font-size='64' font-family='Inter,Segoe UI,Arial' text-anchor='middle' font-weight='700'>Galerie 1</text></svg>">
+        </div>
+        <div class="rounded-lg shadow overflow-hidden aspect-[4/3]">
+          <img class="img-cover" alt="Galerie 2"
+               src="data:image/svg+xml;utf8,<?xml version='1.0' encoding='UTF-8'?><svg xmlns='http://www.w3.org/2000/svg' width='800' height='600' viewBox='0 0 800 600'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%' stop-color='%23F472B6'/><stop offset='100%' stop-color='%2360A5FA'/></linearGradient></defs><rect width='800' height='600' fill='url(%23g)'/><text x='400' y='320' fill='%23fff' font-size='64' font-family='Inter,Segoe UI,Arial' text-anchor='middle' font-weight='700'>Galerie 2</text></svg>">
+        </div>
+        <div class="rounded-lg shadow overflow-hidden aspect-[4/3]">
+          <img class="img-cover" alt="Galerie 3"
+               src="data:image/svg+xml;utf8,<?xml version='1.0' encoding='UTF-8'?><svg xmlns='http://www.w3.org/2000/svg' width='800' height='600' viewBox='0 0 800 600'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%' stop-color='%23F59E0B'/><stop offset='100%' stop-color='%2384CC16'/></linearGradient></defs><rect width='800' height='600' fill='url(%23g)'/><text x='400' y='320' fill='%23fff' font-size='64' font-family='Inter,Segoe UI,Arial' text-anchor='middle' font-weight='700'>Galerie 3</text></svg>">
+        </div>
+        <div class="rounded-lg shadow overflow-hidden aspect-[4/3]">
+          <img class="img-cover" alt="Galerie 4"
+               src="data:image/svg+xml;utf8,<?xml version='1.0' encoding='UTF-8'?><svg xmlns='http://www.w3.org/2000/svg' width='800' height='600' viewBox='0 0 800 600'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%' stop-color='%2322D3EE'/><stop offset='100%' stop-color='%23818CF8'/></linearGradient></defs><rect width='800' height='600' fill='url(%23g)'/><text x='400' y='320' fill='%23fff' font-size='64' font-family='Inter,Segoe UI,Arial' text-anchor='middle' font-weight='700'>Galerie 4</text></svg>">
+        </div>
       </div>
     </section>
 
-    <!-- Bewertungen -->
+    <!-- Bewertungen (inline SVG-аватары) -->
     <section id="bewertungen" class="p-6 rounded-2xl glass border shadow">
       <h2 class="text-2xl font-semibold">Bewertungen</h2>
       <div class="mt-4 grid md:grid-cols-3 gap-4 text-sm">
         <figure class="p-4 bg-white/80 rounded-xl border flex gap-3">
-          <img class="w-10 h-10 rounded-full object-cover" src="/img/rev1.jpg" alt="Kundin M.K.">
+          <img class="w-10 h-10 rounded-full"
+               alt="MK"
+               src="data:image/svg+xml;utf8,<?xml version='1.0' encoding='UTF-8'?><svg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96'><defs><linearGradient id='ga' x1='0' y1='0' x2='1' y2='1'><stop offset='0%' stop-color='%2360A5FA'/><stop offset='100%' stop-color='%23C084FC'/></linearGradient></defs><rect width='96' height='96' rx='48' fill='url(%23ga)'/><text x='48' y='60' text-anchor='middle' font-size='36' font-family='Inter,Segoe UI,Arial' fill='%23fff' font-weight='700'>MK</text></svg>">
           <div class="nowrap">
-            <div class="text-amber-400 text-lg leading-none" aria-label="5 von 5 Sternen">★★★★★</div>
+            <div class="text-amber-400 text-lg leading-none">★★★★★</div>
             <blockquote class="mt-1 text-gray-700">„Schnell & professionell. Anfragen kommen jetzt automatisch.“</blockquote>
             <figcaption class="mt-1 text-gray-500">— M.K.</figcaption>
           </div>
         </figure>
 
         <figure class="p-4 bg-white/80 rounded-xl border flex gap-3">
-          <img class="w-10 h-10 rounded-full object-cover" src="/img/rev2.jpg" alt="Kunde M.S.">
+          <img class="w-10 h-10 rounded-full"
+               alt="MS"
+               src="data:image/svg+xml;utf8,<?xml version='1.0' encoding='UTF-8'?><svg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96'><defs><linearGradient id='ga' x1='0' y1='0' x2='1' y2='1'><stop offset='0%' stop-color='%230EA5E9'/><stop offset='100%' stop-color='%236366F1'/></linearGradient></defs><rect width='96' height='96' rx='48' fill='url(%23ga)'/><text x='48' y='60' text-anchor='middle' font-size='36' font-family='Inter,Segoe UI,Arial' fill='%23fff' font-weight='700'>MS</text></svg>">
           <div class="nowrap">
-            <div class="text-amber-400 text-lg leading-none" aria-label="5 von 5 Sternen">★★★★★</div>
+            <div class="text-amber-400 text-lg leading-none">★★★★★</div>
             <blockquote class="mt-1 text-gray-700">„Sieht super am Handy aus. Preis/Leistung top.“</blockquote>
             <figcaption class="mt-1 text-gray-500">— M.S.</figcaption>
           </div>
         </figure>
 
         <figure class="p-4 bg-white/80 rounded-xl border flex gap-3">
-          <img class="w-10 h-10 rounded-full object-cover" src="/img/rev3.jpg" alt="Kunde M.B.">
+          <img class="w-10 h-10 rounded-full"
+               alt="MB"
+               src="data:image/svg+xml;utf8,<?xml version='1.0' encoding='UTF-8'?><svg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96'><defs><linearGradient id='ga' x1='0' y1='0' x2='1' y2='1'><stop offset='0%' stop-color='%2310B981'/><stop offset='100%' stop-color='%2314B8A6'/></linearGradient></defs><rect width='96' height='96' rx='48' fill='url(%23ga)'/><text x='48' y='60' text-anchor='middle' font-size='36' font-family='Inter,Segoe UI,Arial' fill='%23fff' font-weight='700'>MB</text></svg>">
           <div class="nowrap">
-            <div class="text-amber-400 text-lg leading-none" aria-label="5 von 5 Sternen">★★★★★</div>
+            <div class="text-amber-400 text-lg leading-none">★★★★★</div>
             <blockquote class="mt-1 text-gray-700">„Einfacher Prozess, klare Kommunikation.“</blockquote>
             <figcaption class="mt-1 text-gray-500">— M.B.</figcaption>
           </div>
@@ -370,10 +339,6 @@
       <div class="mt-12 p-6 rounded-2xl glass border shadow">
         <p>Dies ist eine Demo-Seite. Keine echten Bestellungen.</p>
         <p class="mt-2">© <span id="year"></span> Zürich Local Studio</p>
-        <p class="mt-2">
-          <a class="underline hover:no-underline" href="/impressum.html">Impressum</a> ·
-          <a class="underline hover:no-underline" href="/datenschutz.html">Datenschutz</a>
-        </p>
       </div>
     </footer>
   </main>
@@ -381,64 +346,42 @@
   <!-- Mobile sticky CTA -->
   <div class="md:hidden fixed bottom-0 left-0 right-0 p-3 bg-white/90 backdrop-blur border-t shadow">
     <div class="grid grid-cols-3 gap-2">
-      <a href="#" class="px-3 py-2 rounded-lg bg-green-600 text-white text-center" data-wa>WhatsApp</a>
-      <a href="#" class="px-3 py-2 rounded-lg bg-black text-white text-center" data-call>Anrufen</a>
+      <a href="#" onclick="alert('Demo only');return false;" class="px-3 py-2 rounded-lg bg-green-600 text-white text-center">WhatsApp</a>
+      <a href="#" onclick="alert('Demo only');return false;" class="px-3 py-2 rounded-lg bg-black text-white text-center">Anrufen</a>
       <a href="#anfrage" class="px-3 py-2 rounded-lg bg-blue-600 text-white text-center">Anfrage</a>
     </div>
   </div>
 
-  <!-- JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"LocalBusiness",
-    "name":"Zürich Local Studio",
-    "address":{"@type":"PostalAddress","streetAddress":"Musterstrasse 1","addressLocality":"Zürich","postalCode":"8000","addressCountry":"CH"},
-    "telephone":"+41-79-000-00-00",
-    "image":"https://DEIN-DOMAIN-NAME.ch/img/og-cover.jpg",
-    "url":"https://DEIN-DOMAIN-NAME.ch/",
-    "openingHoursSpecification":[
-      {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},
-      {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"14:00"}
-    ],
-    "aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"12"}
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-   "@context":"https://schema.org",
-   "@type":"FAQPage",
-   "mainEntity":[
-    {"@type":"Question","name":"Wie schnell ist die Umsetzung?","acceptedAnswer":{"@type":"Answer","text":"Basic in 2–3 Tagen nach Freigabe."}},
-    {"@type":"Question","name":"Was sind laufende Kosten?","acceptedAnswer":{"@type":"Answer","text":"Nur Domain (~15 CHF/Jahr). Hosting 0 CHF."}},
-    {"@type":"Question","name":"Wie kommen Anfragen in die CRM?","acceptedAnswer":{"@type":"Answer","text":"Formular sendet E-Mails und kann in eine Kanban-CRM integriert werden."}}
-   ]
-  }
-  </script>
-
   <!-- SCRIPTS -->
   <script>
-    // year
+    // год в футере
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // burger toggle + a11y
+    // burger toggle + анимация иконки
     const burger = document.getElementById('burger');
     const menu = document.getElementById('mobileMenu');
     const bar1 = document.getElementById('bar1');
     const bar2 = document.getElementById('bar2');
     const bar3 = document.getElementById('bar3');
+
     burger?.addEventListener('click', () => {
-      const open = menu.classList.toggle('hidden') === false;
-      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
-      if(!open){ bar1.setAttribute('d','M4 7h16'); bar2.setAttribute('d','M4 12h16'); bar3.setAttribute('d','M4 17h16'); }
-      else { bar1.setAttribute('d','M5 5l14 14'); bar2.setAttribute('d','M12 12h0'); bar3.setAttribute('d','M19 5L5 19'); }
+      menu.classList.toggle('hidden');
+      if(menu.classList.contains('hidden')){
+        bar1.setAttribute('d','M4 7h16');
+        bar2.setAttribute('d','M4 12h16');
+        bar3.setAttribute('d','M4 17h16');
+      } else {
+        bar1.setAttribute('d','M5 5l14 14');
+        bar2.setAttribute('d','M12 12h0');
+        bar3.setAttribute('d','M19 5L5 19');
+      }
     });
 
-    // active link on scroll
+    // подсветка активного пункта по скроллу
     const sections = ['leistungen','preise','galerie','bewertungen','anfrage'];
     const links = Array.from(document.querySelectorAll('.navlink'));
     const idToLink = Object.fromEntries(links.map(a => [a.getAttribute('href')?.replace('#',''), a]));
+
     const obs = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if(e.isIntersecting){
@@ -448,10 +391,16 @@
         }
       });
     }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
-    sections.forEach(id => { const el = document.getElementById(id); if(el) obs.observe(el); });
 
-    // close mobile menu on link click
-    document.querySelectorAll('#mobileMenu a').forEach(a=>a.addEventListener('click', ()=> menu.classList.add('hidden')));
+    sections.forEach(id => {
+      const el = document.getElementById(id);
+      if(el) obs.observe(el);
+    });
+
+    // закрытие мобильного меню по клику на пункт
+    document.querySelectorAll('#mobileMenu a').forEach(a=>{
+      a.addEventListener('click', ()=> menu.classList.add('hidden'));
+    });
 
     // Öffnungsstatus (Europe/Zurich)
     (function(){
@@ -470,28 +419,6 @@
       dot.classList.replace('bg-gray-400', open?'bg-green-600':'bg-red-600');
       label.textContent = (open?`Jetzt geöffnet · heute ${f}–${t}`:`Jetzt geschlossen · heute ${f}–${t}`);
     })();
-
-    // lazy-load + blur-up
-    const lazyImgs = [...document.querySelectorAll('img[data-src]')];
-    const io = new IntersectionObserver(entries=>{
-      entries.forEach(e=>{
-        if(!e.isIntersecting) return;
-        const img=e.target;
-        img.style.transition='opacity .7s';
-        img.style.opacity='0.6';
-        img.src=img.dataset.src;
-        img.onload=()=>img.style.opacity='1';
-        io.unobserve(img);
-      });
-    },{rootMargin:'200px 0px'});
-    lazyImgs.forEach(i=>io.observe(i));
-
-    // demo handlers (убери в проде или подставь реальные номера)
-    document.querySelectorAll('[data-call]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault(); alert('Demo: Telefon');}));
-    document.querySelectorAll('[data-wa]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault(); alert('Demo: WhatsApp');}));
   </script>
-
-  <!-- Optional: Plausible (в продакшене включи и поменяй домен) -->
-  <!-- <script defer data-domain="DEIN-DOMAIN-NAME.ch" src="https://plausible.io/js/script.js"></script> -->
 </body>
 </html>
